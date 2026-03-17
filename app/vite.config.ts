@@ -1,8 +1,8 @@
-import { defineConfig } from "vite"
 import { svelte } from "@sveltejs/vite-plugin-svelte"
 import tailwindcss from "@tailwindcss/vite"
 import path from "path"
 import { fileURLToPath } from "url"
+import { defineConfig } from "vite"
 
 const file = fileURLToPath(import.meta.url)
 const dir = path.dirname(file).replace(/\\+/, "/")
@@ -13,8 +13,14 @@ if (dev) {
     sourcemap = "inline"
 }
 
+let base: "" | "frizzante-docs-using-snapshots" = "frizzante-docs-using-snapshots"
+if (dev) {
+    base = ""
+}
+
 // https://vite.dev/config/
 export default defineConfig({
+    base,
     plugins: [
         tailwindcss(),
         svelte({
