@@ -1,0 +1,1 @@
+:root{--shiki-padding: 1rem;--shiki-roundness: 1rem;--a-text: #a2dece;--body-text: #cecdc3;--body-background: #100f0f}html,body{background-color:var(--body-background);color:var(--body-text)}pre.shiki{position:relative;padding:var(--shiki-padding);border-radius:var(--shiki-roundness)}a,a:active{color:var(--a-text);text-decoration:none}a:hover{text-decoration:underline}
