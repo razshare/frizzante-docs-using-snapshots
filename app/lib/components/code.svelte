@@ -21,8 +21,8 @@
 </style>
 
 <script lang="ts">
-    import theme from "@shikijs/themes/vitesse-dark"
-    import { createHighlighterCore, createOnigurumaEngine, type BundledLanguage } from "shiki"
+    import { highlighter } from "$lib/scripts/shiki"
+    import { type BundledLanguage } from "shiki"
     import { onMount } from "svelte"
     type Props = {
         source: string
@@ -52,22 +52,8 @@
         return lines.join("\n").trim()
     }
     onMount(async function ready() {
-        const highlighter = await createHighlighterCore({
-            themes: [theme],
-            langs: [
-                import("@shikijs/langs/javascript"),
-                import("@shikijs/langs/go"),
-                import("@shikijs/langs/sh"),
-                import("@shikijs/langs/bash"),
-                import("@shikijs/langs/svelte"),
-                import("@shikijs/langs/typescript"),
-                import("@shikijs/langs/http"),
-                import("@shikijs/langs/log"),
-            ],
-            engine: createOnigurumaEngine(import("shiki/wasm")),
-        })
-        await highlighter.loadTheme(import("@shikijs/themes/vitesse-dark"))
-        html = await highlighter.codeToHtml(align(source), {
+        const singleton = await highlighter()
+        html = singleton.codeToHtml(align(source), {
             lang: lang,
             theme: "vitesse-dark",
         })

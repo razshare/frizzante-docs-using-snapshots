@@ -309,7 +309,8 @@
         <Tip>
             <span>You can combine any of these render modes with adaptive hyperlinks and forms.</span>
             <br />
-            <span>Read more about <Link href="/web_standards">web standards</Link>.</span>
+            <span>Read more about <Link href="/frizzante-docs-using-snapshots/web_standards">web standards</Link>.</span
+            >
         </Tip>
         <Tip>
             When using <InlineCode source="RenderModeFull" /> or <InlineCode source="RenderModeServer" />, You can
@@ -353,8 +354,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Guards", href: "/guards" }}
-            next={{ label: "Web Standards", href: "/web_standards" }}
+            previous={{ label: "Guards", href: "/frizzante-docs-using-snapshots/guards" }}
+            next={{ label: "Web Standards", href: "/frizzante-docs-using-snapshots/web_standards" }}
         />
     {/snippet}
 </Page>

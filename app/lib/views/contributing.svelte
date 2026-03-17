@@ -90,6 +90,9 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Issues", href: "/issues" }} next={{ label: "Faq", href: "/faq" }} />
+        <Footer
+            previous={{ label: "Issues", href: "/frizzante-docs-using-snapshots/issues" }}
+            next={{ label: "Faq", href: "/frizzante-docs-using-snapshots/faq" }}
+        />
     {/snippet}
 </Page>

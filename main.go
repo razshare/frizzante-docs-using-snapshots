@@ -29,6 +29,7 @@ func main() {
 				send.View(client, views.View{Name: "GetStarted"})
 			}
 		}},
+		{Pattern: "GET /frizzante-docs-using-snapshots", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "GetStarted"}) }},
 		{Pattern: "GET /frizzante-docs-using-snapshots/get_started", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "GetStarted"}) }},
 		{Pattern: "GET /frizzante-docs-using-snapshots/basics", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "Basics"}) }},
 		{Pattern: "GET /frizzante-docs-using-snapshots/web_sockets", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "WebSockets"}) }},

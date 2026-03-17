@@ -12,8 +12,13 @@ export async function swap(target: HTMLAnchorElement | HTMLFormElement, view: Vi
     if (target.nodeName === "A") {
         const anchor = target as HTMLAnchorElement
         requestUrl = anchor.href
+        const parts = anchor.href.split("#", 2)
+        requestUrl = parts[0]
         if (view.type === "snapshot") {
             requestUrl = requestUrl.replace(/\/+$/, "") + "/data.json"
+        }
+        if (parts.length >= 2) {
+            requestUrl += `#${parts[1]}`
         }
         response = await fetch(requestUrl, {
             headers: {

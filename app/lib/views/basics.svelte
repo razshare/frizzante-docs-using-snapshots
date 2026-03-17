@@ -9,7 +9,6 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
-    import { rebaseLink } from "$lib/scripts/rebase_link"
 </script>
 
 <Page title="Basics">
@@ -29,7 +28,7 @@
         insufficient, you're hitting a performance wall, a bug and so on.
     </span>
     <Note>
-        <span>Please <Link href={rebaseLink("/issues")}>report</Link> such incidents if you can.</span>
+        <span>Please <Link href="/frizzante-docs-using-snapshots/issues">report</Link> such incidents if you can.</span>
     </Note>
     <Title text="Server" />
     <span>
@@ -508,8 +507,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Get Started", href: "/get_started" }}
-            next={{ label: "Web Sockets", href: "/web_sockets" }}
+            previous={{ label: "Get Started", href: "/frizzante-docs-using-snapshots/get_started" }}
+            next={{ label: "Web Sockets", href: "/frizzante-docs-using-snapshots/web_sockets" }}
         />
     {/snippet}
 </Page>

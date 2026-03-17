@@ -469,8 +469,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Web Standards", href: "/web_standards" }}
-            next={{ label: "Type Definitions", href: "/type_definitions" }}
+            previous={{ label: "Web Standards", href: "/frizzante-docs-using-snapshots/web_standards" }}
+            next={{ label: "Type Definitions", href: "/frizzante-docs-using-snapshots/type_definitions" }}
         />
     {/snippet}
 </Page>

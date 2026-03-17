@@ -1,9 +1,9 @@
-import { getContext } from "svelte"
-import type { View } from "$lib/scripts/core/view"
-import { route } from "$lib/scripts/core/route.ts"
-import { swap } from "$lib/scripts/core/swap.ts"
 import { IS_BROWSER } from "$lib/scripts/core/is_browser.ts"
+import { route } from "$lib/scripts/core/route.ts"
+import { swap } from "$lib/scripts/core/swap"
 import { swapping } from "$lib/scripts/core/swapping.ts"
+import type { View } from "$lib/scripts/core/view"
+import { getContext } from "svelte"
 export function action(path = ""): {
     action: string
     onsubmit: (event: Event) => Promise<void>

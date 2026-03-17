@@ -35,7 +35,7 @@
     <span>
         On the other hand, when JavaScript is enabled, <InlineCode source="<a>" />
         will render to an anchor that overrides the default behavior of the browser. Instead of navigating away immediately,
-        <a href="/some-other-page">fetch</a> is used to retrieve the contents of
+        <a href="/frizzante-docs-using-snapshots/some-other-page">fetch</a> is used to retrieve the contents of
         <InlineCode source="/some-other-page" /> and update the current state and view based on the server’s response.
     </span>
     <br />
@@ -237,6 +237,9 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Views", href: "/views" }} next={{ label: "Cli", href: "/cli" }} />
+        <Footer
+            previous={{ label: "Views", href: "/frizzante-docs-using-snapshots/views" }}
+            next={{ label: "Cli", href: "/frizzante-docs-using-snapshots/cli" }}
+        />
     {/snippet}
 </Page>
