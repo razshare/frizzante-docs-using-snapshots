@@ -12,6 +12,7 @@ if (dev) {
 }
 // https://vite.dev/config/
 export default defineConfig({
+    base: "frizzante-docs-using-snapshots",
     plugins: [
         tailwindcss(),
         svelte({
