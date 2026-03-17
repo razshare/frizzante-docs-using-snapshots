@@ -52,11 +52,12 @@
 
 <script lang="ts">
     import { href } from "$lib/scripts/core/href"
+    import { rebaseLink } from "$lib/scripts/rebase_link"
     import type { Suggestion } from "$lib/scripts/searchbar/suggestion"
     type Props = Suggestion
     let { description, page, section, href: createSuggestionHref }: Props = $props()
     let suggestionHref = $derived(createSuggestionHref())
-    let { onclick } = $derived(href(suggestionHref))
+    let { onclick } = $derived(href(rebaseLink(suggestionHref)))
 </script>
 
 <button class="suggestion" onmousedown={onclick}>

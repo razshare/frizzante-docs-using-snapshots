@@ -39,6 +39,7 @@
 
 <script lang="ts">
     import { href } from "$lib/scripts/core/href"
+    import { rebaseLink } from "$lib/scripts/rebase_link"
     import type { Snippet } from "svelte"
     type Props = {
         start?: Snippet
@@ -50,7 +51,7 @@
     let { start, children, end, ghost = false, href: path = "" }: Props = $props()
 </script>
 
-<a class="button" class:ghost {...href(path)}>
+<a class="button" class:ghost {...href(rebaseLink(path))}>
     <span class="button-start">
         {#if start}
             {@render start()}

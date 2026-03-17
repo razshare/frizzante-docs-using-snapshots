@@ -67,6 +67,7 @@
     import { href } from "$lib/scripts/core/href"
     import { IS_BROWSER } from "$lib/scripts/core/is_browser"
     import { logo } from "$lib/scripts/logo"
+    import { rebaseLink } from "$lib/scripts/rebase_link"
     import { mdiFunction, mdiGithub } from "@mdi/js"
     type Props = {
         search: string
@@ -78,7 +79,7 @@
 
 <div class="navbar">
     <div class="navbar-menu-link" class:hidden={noMenuLink}>
-        <a {...href("/full-screen-menu")}>
+        <a {...href(rebaseLink("/full-screen-menu"))}>
             <Icon path={mdiFunction} size="2rem" />
         </a>
     </div>

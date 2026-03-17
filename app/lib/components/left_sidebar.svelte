@@ -34,6 +34,7 @@
     import Link from "$lib/components/links/link.svelte"
     import MenuItem from "$lib/components/menu_item.svelte"
     import type { View } from "$lib/scripts/core/view"
+    import { rebaseLink } from "$lib/scripts/rebase_link"
     import { mdiArrowRight, mdiCloudRefresh } from "@mdi/js"
     import { getContext } from "svelte"
     import Icon from "./icons/icon.svelte"
@@ -42,7 +43,7 @@
 </script>
 
 {#snippet item(item: Item)}
-    <Link href={item.href}>
+    <Link href={rebaseLink(item.href)}>
         {#snippet children({ pending })}
             <div class="left-sidebar-item">
                 <div class="left-sidebar-hint">

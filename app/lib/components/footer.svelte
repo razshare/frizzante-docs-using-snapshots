@@ -72,6 +72,7 @@
 </style>
 
 <script lang="ts">
+    import { rebaseLink } from "$lib/scripts/rebase_link"
     import { mdiArrowLeft, mdiArrowRight, mdiCloudRefresh } from "@mdi/js"
     import Icon from "./icons/icon.svelte"
     import Link from "./links/link.svelte"
@@ -87,7 +88,7 @@
     <div class="footer-content">
         <div class="footer-content-previous">
             {#if previous}
-                <Link href={previous.href}>
+                <Link href={rebaseLink(previous.href)}>
                     {#snippet children({ pending })}
                         <div class="footer-content-previous-hint">
                             <span class="footer-content-previous-hint-text">Previous</span>
@@ -108,7 +109,7 @@
         </div>
         <div class="footer-content-next">
             {#if next}
-                <Link href={next.href}>
+                <Link href={rebaseLink(next.href)}>
                     {#snippet children({ pending })}
                         <div class="footer-content-next-hint">
                             <span class="footer-content-next-hint-text">Next</span>
