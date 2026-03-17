@@ -61,6 +61,8 @@
                 import("@shikijs/langs/bash"),
                 import("@shikijs/langs/svelte"),
                 import("@shikijs/langs/typescript"),
+                import("@shikijs/langs/http"),
+                import("@shikijs/langs/log"),
             ],
             engine: createOnigurumaEngine(import("shiki/wasm")),
         })

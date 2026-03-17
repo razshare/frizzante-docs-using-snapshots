@@ -44,6 +44,10 @@ export default defineConfig({
             input: {
                 index: "./index.html",
             },
+            output: {
+                chunkFileNames: `assets/[name].js`,
+                assetFileNames: `assets/[name].[ext]`,
+            },
         },
     },
 })
