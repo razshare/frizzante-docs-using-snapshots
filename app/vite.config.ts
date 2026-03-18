@@ -7,14 +7,12 @@ const file = fileURLToPath(import.meta.url)
 const dir = path.dirname(file).replace(/\\+/, "/")
 const dev = (process.env.DEV ?? "0") === "1"
 let sourcemap: "inline" | boolean = false
-let base = "frizzante-docs-using-snapshots"
 if (dev) {
     sourcemap = "inline"
-    base = ""
 }
 // https://vite.dev/config/
 export default defineConfig({
-    base,
+    base: `./`,
     plugins: [
         tailwindcss(),
         svelte({
@@ -27,6 +25,7 @@ export default defineConfig({
         alias: {
             "$lib": `${path.resolve(dir, "./lib")}`,
             "$gen": `${path.resolve(dir, "../.gen")}`,
+            "$pages": `${path.resolve(dir, "./pages.config.json")}`,
             "$exports.client": `${path.resolve(dir, "./exports.client.ts")}`,
             "$exports.server": `${path.resolve(dir, "./exports.server.ts")}`,
         },

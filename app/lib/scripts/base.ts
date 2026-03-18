@@ -1,6 +1,9 @@
 export function base(path: string): string {
-    if (!path.startsWith("/")) {
-        path = `/${path}`
+    if (path.startsWith("./")) {
+        return path
     }
-    return `/frizzante-docs-using-snapshots${path}`
+    if (path.startsWith("/")) {
+        return `.${path}`
+    }
+    return `./${path}`
 }
