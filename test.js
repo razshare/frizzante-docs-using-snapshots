@@ -6549,7 +6549,6 @@ function Full_screen_menu($$renderer, $$props) {
 function Get_started($$renderer, $$props) {
   $$renderer.component(($$renderer2) => {
     let { dev } = $$props;
-    console.log({ dev });
     {
       let rightSidebar = function($$renderer3) {
         Right_sidebar($$renderer3, {

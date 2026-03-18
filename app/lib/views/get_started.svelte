@@ -11,7 +11,6 @@
     import { base } from "$lib/scripts/base"
     import { mdiPackage } from "@mdi/js"
     let { dev } = $props()
-    console.log({ dev })
 </script>
 
 <Page title="Get Started" {dev}>
