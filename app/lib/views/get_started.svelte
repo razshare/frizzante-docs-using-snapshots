@@ -59,6 +59,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer next={{ label: "Basics", href: "/basics" }} />
+        <Footer next={{ label: "Basics", href: "./basics" }} />
     {/snippet}
 </Page>

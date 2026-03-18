@@ -90,6 +90,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Issues", href: "/issues" }} next={{ label: "Faq", href: "/faq" }} />
+        <Footer previous={{ label: "Issues", href: "./issues" }} next={{ label: "Faq", href: "./faq" }} />
     {/snippet}
 </Page>

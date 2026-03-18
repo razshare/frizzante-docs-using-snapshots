@@ -8,7 +8,6 @@ export function href(path = ""): {
     href: string
     onclick: (event: MouseEvent) => Promise<boolean>
 } {
-    path = `/frizzante-docs-using-snapshots${path}`
     if (!IS_BROWSER) {
         return {
             href: path,

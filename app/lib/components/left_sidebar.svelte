@@ -61,39 +61,19 @@
 {/snippet}
 
 <div class="left-sidebar">
-    {@render item({ text: "Get Started", viewName: "GetStarted", href: "/get_started" })}
-    {@render item({ text: "Basics", viewName: "Basics", href: "/basics" })}
-    {@render item({ text: "Web Sockets", viewName: "WebSockets", href: "/web_sockets" })}
-    {@render item({
-        text: "Server Sent Events",
-        viewName: "ServerSentEvents",
-        href: "/server_sent_events",
-    })}
-    {@render item({ text: "Guards", viewName: "Guards", href: "/guards" })}
-    {@render item({ text: "Views", viewName: "Views", href: "/views" })}
-    {@render item({
-        text: "Web Standards",
-        viewName: "WebStandards",
-        href: "/web_standards",
-    })}
-    {@render item({ text: "Cli", viewName: "Cli", href: "/cli" })}
-    {@render item({
-        text: "Type Definitions",
-        viewName: "TypeDefinitions",
-        href: "/type_definitions",
-    })}
-    {@render item({ text: "Snapshots", viewName: "Snapshots", href: "/snapshots" })}
-    {@render item({
-        text: "Todos Example",
-        viewName: "TodosExample",
-        href: "/todos_example",
-    })}
-    {@render item({ text: "Docker", viewName: "Docker", href: "/docker" })}
-    {@render item({ text: "Issues", viewName: "Issues", href: "/issues" })}
-    {@render item({
-        text: "Contributing",
-        viewName: "Contributing",
-        href: "/contributing",
-    })}
-    {@render item({ text: "Faq", viewName: "Faq", href: "/faq" })}
+    {@render item({ text: "Get Started", viewName: "GetStarted", href: "./get_started" })}
+    {@render item({ text: "Basics", viewName: "Basics", href: "./basics" })}
+    {@render item({ text: "Web Sockets", viewName: "WebSockets", href: "./web_sockets" })}
+    {@render item({ text: "Server Sent Events", viewName: "ServerSentEvents", href: "./server_sent_events" })}
+    {@render item({ text: "Guards", viewName: "Guards", href: "./guards" })}
+    {@render item({ text: "Views", viewName: "Views", href: "./views" })}
+    {@render item({ text: "Web Standards", viewName: "WebStandards", href: "./web_standards" })}
+    {@render item({ text: "Cli", viewName: "Cli", href: "./cli" })}
+    {@render item({ text: "Type Definitions", viewName: "TypeDefinitions", href: "./type_definitions" })}
+    {@render item({ text: "Snapshots", viewName: "Snapshots", href: "./snapshots" })}
+    {@render item({ text: "Todos Example", viewName: "TodosExample", href: "./todos_example" })}
+    {@render item({ text: "Docker", viewName: "Docker", href: "./docker" })}
+    {@render item({ text: "Issues", viewName: "Issues", href: "./issues" })}
+    {@render item({ text: "Contributing", viewName: "Contributing", href: "./contributing" })}
+    {@render item({ text: "Faq", viewName: "Faq", href: "./faq" })}
 </div>

@@ -60,8 +60,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Basics", href: "/basics" }}
-            next={{ label: "Server Sent Events", href: "/server_sent_events" }}
+            previous={{ label: "Basics", href: "./basics" }}
+            next={{ label: "Server Sent Events", href: "./server_sent_events" }}
         />
     {/snippet}
 </Page>

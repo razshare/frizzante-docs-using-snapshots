@@ -220,8 +220,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Type Definitions", href: "/type_definitions" }}
-            next={{ label: "Todos Example", href: "/todos_example" }}
+            previous={{ label: "Type Definitions", href: "./type_definitions" }}
+            next={{ label: "Todos Example", href: "./todos_example" }}
         />
     {/snippet}
 </Page>
