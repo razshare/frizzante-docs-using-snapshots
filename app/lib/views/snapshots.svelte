@@ -152,7 +152,7 @@
     </KeyedSection>
     <KeyedSection key="3" description="Snapshot" noLink>
         <span>
-            Run the frizzante cli, point it to the <InlineCode source="GET /@statics" /> route and give it an output directory.
+            Run the frizzante cli and point it to the <InlineCode source="GET /@statics" /> route.
         </span>
         <Code lang="bash" source="frizzante generate snapshot http://127.0.0.1:8080/@statics .gen/snapshot" />
         <span>
