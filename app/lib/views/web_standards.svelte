@@ -162,7 +162,7 @@
     <span>It is a replacement for your <InlineCode source="<a>" /> elements.</span>
     <br />
     <span>In your project root directory, run the following</span>
-    <Code lang="shell" source="frizzante -glinks" />
+    <Code lang="shell" source="frizzante g links" />
     <span>This will add the <InlineCode source="<Link>" /> component to your project.</span>
     <br />
     <span>
@@ -202,7 +202,7 @@
     <Code
         lang="shell"
         source={`
-            frizzante -gforms
+            frizzante g forms
         `}
     />
     <span>This will add the <InlineCode source="<Form>" /> component to your project.</span>

@@ -17,7 +17,7 @@ import{p as K,f as p,a as f,s as e,b as a,c as M,g as j,d as C,e as g}from"./ind
                     Error   string \`json:"error"\`
                 }
             `})},$$slots:{default:!0}});var z=e(T,2);y(z,{key:"3",description:"Generate types.",noLink:!0,children:(r,x)=>{var t=W(),o=f(t);n(o,{lang:"shell",source:`
-                frizzante -gtypes
+                frizzante g types
             `});var c=e(o,2),u=e(g(c));i(u,{source:".gen/types"});var m=e(c,2);n(m,{lang:"ts",source:`
                 export type Props = welcome.Props
                 export declare namespace welcome {

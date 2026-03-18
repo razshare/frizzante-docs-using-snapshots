@@ -56,7 +56,7 @@
         <Code
             lang="shell"
             source={`
-                frizzante -gtypes
+                frizzante g types
             `}
         />
         <span>This will generate your type definitions in <InlineCode source=".gen/types" />.</span>

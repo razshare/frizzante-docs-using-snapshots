@@ -64,7 +64,7 @@ import{p as _e,f as ye,a as ke,s as e,h as Se,b as xe,c as Fe,g as Q,d as X,e as
                 <input type="text" name="name" />
                 <button type="submit">Submit</button>
             </form>
-        `});var M=e(T,2),V=e(n(M));r(V,{source:"onsubmit(event)"});var le=e(V,2);r(le,{source:"/process"});var A=e(M,2);o(A,{text:"Link Component"});var J=e(A,2),ce=e(n(J));r(ce,{source:"<Link>"});var P=e(J,4),he=e(n(P));r(he,{source:"<a>"});var j=e(P,6);t(j,{lang:"shell",source:"frizzante -glinks"});var q=e(j,2),me=e(n(q));r(me,{source:"<Link>"});var G=e(q,4),O=e(n(G));r(O,{source:"pending"});var B=e(O,2);r(B,{source:"error"});var ve=e(B,2);r(ve,{source:"children"});var H=e(G,2);t(H,{lang:"svelte",source:`
+        `});var M=e(T,2),V=e(n(M));r(V,{source:"onsubmit(event)"});var le=e(V,2);r(le,{source:"/process"});var A=e(M,2);o(A,{text:"Link Component"});var J=e(A,2),ce=e(n(J));r(ce,{source:"<Link>"});var P=e(J,4),he=e(n(P));r(he,{source:"<a>"});var j=e(P,6);t(j,{lang:"shell",source:"frizzante g links"});var q=e(j,2),me=e(n(q));r(me,{source:"<Link>"});var G=e(q,4),O=e(n(G));r(O,{source:"pending"});var B=e(O,2);r(B,{source:"error"});var ve=e(B,2);r(ve,{source:"children"});var H=e(G,2);t(H,{lang:"svelte",source:`
             <script lang="ts">
                 import Link from "$lib/components/links/link.svelte"
             <\/script>
@@ -81,7 +81,7 @@ import{p as _e,f as ye,a as ke,s as e,h as Se,b as xe,c as Fe,g as Q,d as X,e as
                 {/snippet}
             </Link>
         `});var N=e(H,2);o(N,{text:"Form Component"});var U=e(N,2),ue=e(n(U));r(ue,{source:"<Form>"});var Y=e(U,4),fe=e(n(Y));r(fe,{source:"<form>"});var E=e(Y,6);t(E,{lang:"shell",source:`
-            frizzante -gforms
+            frizzante g forms
         `});var K=e(E,2),ge=e(n(K));r(ge,{source:"<Form>"});var be=e(K,6);t(be,{lang:"svelte",source:`
             <script lang="ts">
                 import Form from "$lib/components/forms/form.svelte"
