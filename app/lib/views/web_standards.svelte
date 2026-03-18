@@ -207,7 +207,9 @@
     />
     <span>This will add the <InlineCode source="<Form>" /> component to your project.</span>
     <br />
-    <span>This component passes down pending and error states through the children snippet.</span>
+    <span>
+        This component passes down pending and error states through the <InlineCode source="children" /> snippet.
+    </span>
     <Code
         lang="svelte"
         source={`
