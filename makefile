@@ -10,6 +10,9 @@ test:
 build:
 	frizzante build
 
+publish:
+	./publish.sh
+
 dev:
 	frizzante dev
 

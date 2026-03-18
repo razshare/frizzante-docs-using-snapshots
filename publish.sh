@@ -1,0 +1,12 @@
+#!/usr/bin/bash
+make build
+./.gen/bin/app & 
+APP_PID=$!
+make snapshot
+echo "killing $APP_PID"
+kill $APP_PID
+rm docs -fr
+mv ./.gen/snapshot ./docs
+git add .
+git commit -m"chore(app): creating snapshot"
+git push

@@ -3,16 +3,19 @@ import tailwindcss from "@tailwindcss/vite"
 import path from "path"
 import { fileURLToPath } from "url"
 import { defineConfig } from "vite"
+import { prefix } from "./pages.config.json"
 const file = fileURLToPath(import.meta.url)
 const dir = path.dirname(file).replace(/\\+/, "/")
 const dev = (process.env.DEV ?? "0") === "1"
+let base = prefix
 let sourcemap: "inline" | boolean = false
 if (dev) {
     sourcemap = "inline"
+    base = ""
 }
 // https://vite.dev/config/
 export default defineConfig({
-    base: `./`,
+    base,
     plugins: [
         tailwindcss(),
         svelte({
