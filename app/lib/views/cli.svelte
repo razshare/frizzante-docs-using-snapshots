@@ -405,7 +405,11 @@
     />
     <span>
         Normally <InlineCode source="frizzante" /> will prompt the user for required parameters whenever they're being passed
-        in, the <InlineCode source="--strict" />
+        in.
+    </span>
+    <br />
+    <span>
+        The <InlineCode source="--strict" />
         flag disables this behavior and instead defaults to stopping the program whenever a required parameter is missing.
     </span>
     <Tip>

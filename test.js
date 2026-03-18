@@ -5974,7 +5974,7 @@ function Cli($$renderer, $$props) {
           $$renderer3.push(`<!----> <span>Normally `);
           Inline_code($$renderer3, { source: "frizzante" });
           $$renderer3.push(`<!----> will prompt the user for required parameters whenever they're being passed
-        in, the `);
+        in.</span> <br/> <span>The `);
           Inline_code($$renderer3, { source: "--strict" });
           $$renderer3.push(`<!----> flag disables this behavior and instead defaults to stopping the program whenever a required parameter is missing.</span> `);
           Tip($$renderer3, {
