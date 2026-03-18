@@ -1,14 +1,13 @@
 <style>
     a {
-        display: inline-block;
         position: relative;
         width: 100%;
     }
 </style>
 
 <script lang="ts">
-    import type { Snippet } from "svelte"
     import { href } from "$lib/scripts/core/href.ts"
+    import type { Snippet } from "svelte"
     type Props = {
         href: string
         children: Snippet<[{ pending: boolean; error: false | Error }]>
