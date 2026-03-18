@@ -30,7 +30,9 @@
     />
     <span>
         When JavaScript is disabled, <InlineCode source="<a>" />
-        will render as a traditional anchor, which by default will navigate the client away to /some-other-page
+        will render as a traditional anchor, which by default will navigate the client away to <InlineCode
+            source="/some-other-page"
+        />.
     </span>
     <br />
     <span>
