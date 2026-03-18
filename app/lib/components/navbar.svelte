@@ -64,6 +64,7 @@
     import Icon from "$lib/components/icons/icon.svelte"
     import Image from "$lib/components/image.svelte"
     import Searchbar from "$lib/components/searchbar.svelte"
+    import { base } from "$lib/scripts/base"
     import { href } from "$lib/scripts/core/href"
     import { IS_BROWSER } from "$lib/scripts/core/is_browser"
     import { logo } from "$lib/scripts/logo"
@@ -78,7 +79,7 @@
 
 <div class="navbar">
     <div class="navbar-menu-link" class:hidden={noMenuLink}>
-        <a {...href("/full-screen-menu")}>
+        <a {...href(base("/full-screen-menu"))}>
             <Icon path={mdiFunction} size="2rem" />
         </a>
     </div>
