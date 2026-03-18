@@ -9,6 +9,7 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
 </script>
 
 <Page title="Basics">
@@ -28,7 +29,7 @@
         insufficient, you're hitting a performance wall, a bug and so on.
     </span>
     <Note>
-        <span>Please <Link href="./issues">report</Link> such incidents if you can.</span>
+        <span>Please <Link href={base("/issues")}>report</Link> such incidents if you can.</span>
     </Note>
     <Title text="Server" />
     <span>
@@ -507,8 +508,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Get Started", href: "./get_started" }}
-            next={{ label: "Web Sockets", href: "./web_sockets" }}
+            previous={{ label: "Get Started", href: base("/get_started") }}
+            next={{ label: "Web Sockets", href: base("/web_sockets") }}
         />
     {/snippet}
 </Page>

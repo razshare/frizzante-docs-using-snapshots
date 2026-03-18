@@ -8,6 +8,7 @@
     import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
     import { mdiPackage } from "@mdi/js"
 </script>
 
@@ -59,6 +60,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer next={{ label: "Basics", href: "./basics" }} />
+        <Footer next={{ label: "Basics", href: base("/basics") }} />
     {/snippet}
 </Page>

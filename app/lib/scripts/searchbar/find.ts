@@ -1,3 +1,4 @@
+import { base } from "$lib/scripts/base"
 import type { Suggestion } from "$lib/scripts/searchbar/suggestion"
 import { textToAnchor } from "$lib/scripts/text_to_anchor"
 import Fuse from "fuse.js"
@@ -8,7 +9,7 @@ const suggestions: Suggestion[] = [
         section: "Install frizzante",
         description: "Install frizzante and get started",
         href(): string {
-            return `/get_started#${textToAnchor(this.section)}`
+            return base(`/get_started#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -16,7 +17,7 @@ const suggestions: Suggestion[] = [
         section: "Create project",
         description: "Create a new frizzante project using the cli",
         href(): string {
-            return `/get_started#${textToAnchor(this.section)}`
+            return base(`/get_started#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -24,7 +25,7 @@ const suggestions: Suggestion[] = [
         section: "Configure project",
         description: "Configure the project after creating it",
         href(): string {
-            return `/get_started#${textToAnchor(this.section)}`
+            return base(`/get_started#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -32,7 +33,7 @@ const suggestions: Suggestion[] = [
         section: "Start development",
         description: "Start development watcher",
         href(): string {
-            return `/get_started#${textToAnchor(this.section)}`
+            return base(`/get_started#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -40,7 +41,7 @@ const suggestions: Suggestion[] = [
         section: "Build",
         description: "Build the project to a standalone binary",
         href(): string {
-            return `/get_started#${textToAnchor(this.section)}`
+            return base(`/get_started#${textToAnchor(this.section)}`)
         },
     },
     // Basics.
@@ -49,7 +50,7 @@ const suggestions: Suggestion[] = [
         section: "Basics",
         description: "Basic concepts of frizzante",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -57,7 +58,7 @@ const suggestions: Suggestion[] = [
         section: "Server",
         description: "Create a new server",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -65,7 +66,7 @@ const suggestions: Suggestion[] = [
         section: "Routes",
         description: "Manage server routes",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -73,7 +74,7 @@ const suggestions: Suggestion[] = [
         section: "Path Fields",
         description: "Define variable path fields and retrieve them in your route handler",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -81,7 +82,7 @@ const suggestions: Suggestion[] = [
         section: "Messages",
         description: "Send and receives messages",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -89,7 +90,7 @@ const suggestions: Suggestion[] = [
         section: "Headers",
         description: "Send and receive header fields",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -97,7 +98,7 @@ const suggestions: Suggestion[] = [
         section: "Status",
         description: "Send status code to the client",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -105,7 +106,7 @@ const suggestions: Suggestion[] = [
         section: "Order of Operations",
         description: "The order in which data is sent to the client is important",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -113,7 +114,7 @@ const suggestions: Suggestion[] = [
         section: "Queries",
         description: "Receive query strings from the client",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -121,7 +122,7 @@ const suggestions: Suggestion[] = [
         section: "Forms",
         description: "Receive and unmarshal form payloads from the client",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -129,7 +130,7 @@ const suggestions: Suggestion[] = [
         section: "Json",
         description: "Receive and unmarshal json payloads from the client",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -137,7 +138,7 @@ const suggestions: Suggestion[] = [
         section: "Cookies",
         description: "Send and receive cookies",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -145,7 +146,7 @@ const suggestions: Suggestion[] = [
         section: "Session Id",
         description: "Receive (and initialize) a client's session id",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -153,7 +154,7 @@ const suggestions: Suggestion[] = [
         section: "Session",
         description: "Receive (and initialize) a client's session",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -161,7 +162,7 @@ const suggestions: Suggestion[] = [
         section: "Redirect",
         description: "Redirect the client to a different page",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -169,7 +170,7 @@ const suggestions: Suggestion[] = [
         section: "Navigate",
         description: "Redirect the client to a different page using status code 302",
         href(): string {
-            return `/basics#${textToAnchor(this.section)}`
+            return base(`/basics#${textToAnchor(this.section)}`)
         },
     },
     // Web Sockets.
@@ -178,7 +179,7 @@ const suggestions: Suggestion[] = [
         section: "Web Sockets",
         description: "Upgrade the connection to web sockets",
         href(): string {
-            return `/web_sockets#${textToAnchor(this.section)}`
+            return base(`/web_sockets#${textToAnchor(this.section)}`)
         },
     },
     // Serve Sent Events.
@@ -187,7 +188,7 @@ const suggestions: Suggestion[] = [
         section: "Server Sent Events",
         description: "Upgrade the connection to server sent events",
         href(): string {
-            return `/server_sent_events#${textToAnchor(this.section)}`
+            return base(`/server_sent_events#${textToAnchor(this.section)}`)
         },
     },
     // Guards.
@@ -196,7 +197,7 @@ const suggestions: Suggestion[] = [
         section: "Guards",
         description: "Protect your routes using custom rules",
         href(): string {
-            return `/guards#${textToAnchor(this.section)}`
+            return base(`/guards#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -204,7 +205,7 @@ const suggestions: Suggestion[] = [
         section: "Composition",
         description: "Compose guards to create advances rules",
         href(): string {
-            return `/guards#${textToAnchor(this.section)}`
+            return base(`/guards#${textToAnchor(this.section)}`)
         },
     },
     // Views
@@ -213,7 +214,7 @@ const suggestions: Suggestion[] = [
         section: "Views",
         description: "Manage views",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -221,7 +222,7 @@ const suggestions: Suggestion[] = [
         section: "Server Exports",
         description: "Views that are meant to be rendered on the server",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -229,7 +230,7 @@ const suggestions: Suggestion[] = [
         section: "Client Exports",
         description: "Views that are meant to be rendered on the client",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -237,7 +238,7 @@ const suggestions: Suggestion[] = [
         section: "Send Views",
         description: "Send views from a route handler",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -245,7 +246,7 @@ const suggestions: Suggestion[] = [
         section: "Default View",
         description: 'How to setup a "default" view',
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -253,7 +254,7 @@ const suggestions: Suggestion[] = [
         section: "View Properties",
         description: "Pass properties to views",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -261,7 +262,7 @@ const suggestions: Suggestion[] = [
         section: "Render Modes",
         description: "Switch between render modes at runtime",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -269,7 +270,7 @@ const suggestions: Suggestion[] = [
         section: "RenderModeFull",
         description: "The view is rendered on both the server and the client",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -277,7 +278,7 @@ const suggestions: Suggestion[] = [
         section: "RenderModeServer",
         description: "The view is rendered only on the server",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -285,7 +286,7 @@ const suggestions: Suggestion[] = [
         section: "RenderModeClient",
         description: "The view is rendered only on the client",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -293,7 +294,7 @@ const suggestions: Suggestion[] = [
         section: "Disabling server-side JavaScript runtime",
         description: "Disable the server-side JavaScript runtime in order to reduce memory footprint and binary size",
         href(): string {
-            return `/views#${textToAnchor(this.section)}`
+            return base(`/views#${textToAnchor(this.section)}`)
         },
     },
     // Web Standards.
@@ -302,7 +303,7 @@ const suggestions: Suggestion[] = [
         section: "Web Standards",
         description: "",
         href(): string {
-            return `/web_standards#${textToAnchor(this.section)}`
+            return base(`/web_standards#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -310,7 +311,7 @@ const suggestions: Suggestion[] = [
         section: "Adaptive Hyperlinks",
         description: "",
         href(): string {
-            return `/web_standards#${textToAnchor(this.section)}`
+            return base(`/web_standards#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -318,7 +319,7 @@ const suggestions: Suggestion[] = [
         section: "Adaptive Forms",
         description: "",
         href(): string {
-            return `/web_standards#${textToAnchor(this.section)}`
+            return base(`/web_standards#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -326,7 +327,7 @@ const suggestions: Suggestion[] = [
         section: "Link Component",
         description: "",
         href(): string {
-            return `/web_standards#${textToAnchor(this.section)}`
+            return base(`/web_standards#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -334,7 +335,7 @@ const suggestions: Suggestion[] = [
         section: "Form Component",
         description: "",
         href(): string {
-            return `/web_standards#${textToAnchor(this.section)}`
+            return base(`/web_standards#${textToAnchor(this.section)}`)
         },
     },
     // Type Definitions.
@@ -343,7 +344,7 @@ const suggestions: Suggestion[] = [
         section: "Type Definitions",
         description: "",
         href(): string {
-            return `/type_definitions#${textToAnchor(this.section)}`
+            return base(`/type_definitions#${textToAnchor(this.section)}`)
         },
     },
     // Todos Example.
@@ -352,7 +353,7 @@ const suggestions: Suggestion[] = [
         section: "Todos Example",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -360,7 +361,7 @@ const suggestions: Suggestion[] = [
         section: "Main",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -368,7 +369,7 @@ const suggestions: Suggestion[] = [
         section: "Fallback",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -376,7 +377,7 @@ const suggestions: Suggestion[] = [
         section: "Welcome View",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -384,7 +385,7 @@ const suggestions: Suggestion[] = [
         section: "Todos View",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -392,7 +393,7 @@ const suggestions: Suggestion[] = [
         section: "List Todos",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -400,7 +401,7 @@ const suggestions: Suggestion[] = [
         section: "Remove Todos",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -408,7 +409,7 @@ const suggestions: Suggestion[] = [
         section: "Toggle Todos",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -416,7 +417,7 @@ const suggestions: Suggestion[] = [
         section: "Add Todos",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -424,7 +425,7 @@ const suggestions: Suggestion[] = [
         section: "More Examples",
         description: "",
         href(): string {
-            return `/todos_example#${textToAnchor(this.section)}`
+            return base(`/todos_example#${textToAnchor(this.section)}`)
         },
     },
     // Cli.
@@ -433,7 +434,7 @@ const suggestions: Suggestion[] = [
         section: "Cli",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -441,7 +442,7 @@ const suggestions: Suggestion[] = [
         section: "Create Project",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -449,7 +450,7 @@ const suggestions: Suggestion[] = [
         section: "Generate",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -457,7 +458,7 @@ const suggestions: Suggestion[] = [
         section: "Configure",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -465,7 +466,7 @@ const suggestions: Suggestion[] = [
         section: "Configure",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -473,7 +474,7 @@ const suggestions: Suggestion[] = [
         section: "Plugins",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -481,7 +482,7 @@ const suggestions: Suggestion[] = [
         section: "Update",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -489,7 +490,7 @@ const suggestions: Suggestion[] = [
         section: "Package",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -497,7 +498,7 @@ const suggestions: Suggestion[] = [
         section: "Package Watch",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -505,7 +506,7 @@ const suggestions: Suggestion[] = [
         section: "Build",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -513,7 +514,7 @@ const suggestions: Suggestion[] = [
         section: "Check",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -521,7 +522,7 @@ const suggestions: Suggestion[] = [
         section: "Touch",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -529,7 +530,7 @@ const suggestions: Suggestion[] = [
         section: "Clean Project",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -537,7 +538,7 @@ const suggestions: Suggestion[] = [
         section: "Reset",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -545,7 +546,7 @@ const suggestions: Suggestion[] = [
         section: "Strict",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -553,7 +554,7 @@ const suggestions: Suggestion[] = [
         section: "Version",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -561,7 +562,7 @@ const suggestions: Suggestion[] = [
         section: "Help",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -569,7 +570,7 @@ const suggestions: Suggestion[] = [
         section: "Interactive Mode",
         description: "",
         href(): string {
-            return `/cli#${textToAnchor(this.section)}`
+            return base(`/cli#${textToAnchor(this.section)}`)
         },
     },
     // Snapshots.
@@ -578,7 +579,7 @@ const suggestions: Suggestion[] = [
         section: "Snapshots",
         description: "",
         href(): string {
-            return `/snapshots#${textToAnchor(this.section)}`
+            return base(`/snapshots#${textToAnchor(this.section)}`)
         },
     },
     // Docker.
@@ -587,7 +588,7 @@ const suggestions: Suggestion[] = [
         section: "Docker",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -595,7 +596,7 @@ const suggestions: Suggestion[] = [
         section: "Create a new container",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -603,7 +604,7 @@ const suggestions: Suggestion[] = [
         section: "Start the container",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -611,7 +612,7 @@ const suggestions: Suggestion[] = [
         section: "Attach to this container with your IDE or directly with a shell",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -619,7 +620,7 @@ const suggestions: Suggestion[] = [
         section: "Configure project",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -627,7 +628,7 @@ const suggestions: Suggestion[] = [
         section: "Start development",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -635,7 +636,7 @@ const suggestions: Suggestion[] = [
         section: "Build",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -643,7 +644,7 @@ const suggestions: Suggestion[] = [
         section: "Build and run production binary inside container",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -651,7 +652,7 @@ const suggestions: Suggestion[] = [
         section: "Build production Docker image",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -659,7 +660,7 @@ const suggestions: Suggestion[] = [
         section: "Use Docker Compose for production",
         description: "",
         href(): string {
-            return `/docker#${textToAnchor(this.section)}`
+            return base(`/docker#${textToAnchor(this.section)}`)
         },
     },
     // Issues.
@@ -668,7 +669,7 @@ const suggestions: Suggestion[] = [
         section: "Reporting a Bug",
         description: "",
         href(): string {
-            return `/issues#${textToAnchor(this.section)}`
+            return base(`/issues#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -676,7 +677,7 @@ const suggestions: Suggestion[] = [
         section: "Requesting a Feature",
         description: "",
         href(): string {
-            return `/issues#${textToAnchor(this.section)}`
+            return base(`/issues#${textToAnchor(this.section)}`)
         },
     },
     // Contributing.
@@ -685,7 +686,7 @@ const suggestions: Suggestion[] = [
         section: "Contributing",
         description: "",
         href(): string {
-            return `/contributing#${textToAnchor(this.section)}`
+            return base(`/contributing#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -693,7 +694,7 @@ const suggestions: Suggestion[] = [
         section: "Clone Repository",
         description: "",
         href(): string {
-            return `/contributing#${textToAnchor(this.section)}`
+            return base(`/contributing#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -701,7 +702,7 @@ const suggestions: Suggestion[] = [
         section: "Create Branch",
         description: "",
         href(): string {
-            return `/contributing#${textToAnchor(this.section)}`
+            return base(`/contributing#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -709,7 +710,7 @@ const suggestions: Suggestion[] = [
         section: "Coding Standards",
         description: "",
         href(): string {
-            return `/contributing#${textToAnchor(this.section)}`
+            return base(`/contributing#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -717,7 +718,7 @@ const suggestions: Suggestion[] = [
         section: "Export Everything",
         description: "",
         href(): string {
-            return `/contributing#${textToAnchor(this.section)}`
+            return base(`/contributing#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -725,7 +726,7 @@ const suggestions: Suggestion[] = [
         section: "Data & Logic",
         description: "",
         href(): string {
-            return `/contributing#${textToAnchor(this.section)}`
+            return base(`/contributing#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -733,7 +734,7 @@ const suggestions: Suggestion[] = [
         section: "Pull Requests",
         description: "",
         href(): string {
-            return `/contributing#${textToAnchor(this.section)}`
+            return base(`/contributing#${textToAnchor(this.section)}`)
         },
     },
     // Faq.
@@ -742,7 +743,7 @@ const suggestions: Suggestion[] = [
         section: "Why doesn't frizzante have middleware?",
         description: "",
         href(): string {
-            return `/faq#${textToAnchor(this.section)}`
+            return base(`/faq#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -750,7 +751,7 @@ const suggestions: Suggestion[] = [
         section: "Middleware Implementation",
         description: "",
         href(): string {
-            return `/faq#${textToAnchor(this.section)}`
+            return base(`/faq#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -758,7 +759,7 @@ const suggestions: Suggestion[] = [
         section: "Middleware Usage",
         description: "",
         href(): string {
-            return `/faq#${textToAnchor(this.section)}`
+            return base(`/faq#${textToAnchor(this.section)}`)
         },
     },
     {
@@ -766,7 +767,7 @@ const suggestions: Suggestion[] = [
         section: "Can I use Frizzante with other frontend frameworks?",
         description: "",
         href(): string {
-            return `/faq#${textToAnchor(this.section)}`
+            return base(`/faq#${textToAnchor(this.section)}`)
         },
     },
 ]

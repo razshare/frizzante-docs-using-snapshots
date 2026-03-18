@@ -8,6 +8,7 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
     import { href } from "$lib/scripts/core/href"
 </script>
 
@@ -98,6 +99,9 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Cli", href: "./cli" }} next={{ label: "Snapshots", href: "./snapshots" }} />
+        <Footer
+            previous={{ label: "Cli", href: base("/cli") }}
+            next={{ label: "Snapshots", href: base("/snapshots") }}
+        />
     {/snippet}
 </Page>

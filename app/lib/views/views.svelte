@@ -11,6 +11,7 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
     import { mdiCodeBraces } from "@mdi/js"
 </script>
 
@@ -309,7 +310,7 @@
         <Tip>
             <span>You can combine any of these render modes with adaptive hyperlinks and forms.</span>
             <br />
-            <span>Read more about <Link href="./web_standards">web standards</Link>.</span>
+            <span>Read more about <Link href={base("/web_standards")}>web standards</Link>.</span>
         </Tip>
         <Tip>
             When using <InlineCode source="RenderModeFull" /> or <InlineCode source="RenderModeServer" />, You can
@@ -353,8 +354,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Guards", href: "./guards" }}
-            next={{ label: "Web Standards", href: "./web_standards" }}
+            previous={{ label: "Guards", href: base("/guards") }}
+            next={{ label: "Web Standards", href: base("/web_standards") }}
         />
     {/snippet}
 </Page>

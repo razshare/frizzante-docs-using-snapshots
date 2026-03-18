@@ -9,6 +9,7 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
     import { mdiApplication } from "@mdi/js"
 </script>
 
@@ -114,8 +115,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Todos Example", href: "./todos_example" }}
-            next={{ label: "Issues", href: "./issues" }}
+            previous={{ label: "Todos Example", href: base("/todos_example") }}
+            next={{ label: "Issues", href: base("/issues") }}
         />
     {/snippet}
 </Page>

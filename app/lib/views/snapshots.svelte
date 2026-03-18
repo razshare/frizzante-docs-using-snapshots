@@ -8,6 +8,7 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
 </script>
 
 <Page title="Snapshots">
@@ -220,8 +221,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Type Definitions", href: "./type_definitions" }}
-            next={{ label: "Todos Example", href: "./todos_example" }}
+            previous={{ label: "Type Definitions", href: base("/type_definitions") }}
+            next={{ label: "Todos Example", href: base("/todos_example") }}
         />
     {/snippet}
 </Page>

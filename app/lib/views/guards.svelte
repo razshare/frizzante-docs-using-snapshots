@@ -12,6 +12,7 @@
     import Image from "$lib/components/image.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
 </script>
 
 <Page title="Guards">
@@ -101,8 +102,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Server Sent Events", href: "./server_sent_events" }}
-            next={{ label: "Views", href: "./views" }}
+            previous={{ label: "Server Sent Events", href: base("/server_sent_events") }}
+            next={{ label: "Views", href: base("/views") }}
         />
     {/snippet}
 </Page>

@@ -6,6 +6,7 @@
     import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
 </script>
 
 <Page title="Faq">
@@ -59,7 +60,7 @@
     </ul>
     <span>
         For more details see the
-        <a href="./guards">guards page</a>.
+        <a href={base("/guards")}>guards page</a>.
     </span>
     <Title type="h5" text="Middleware Implementation" />
     <span> If you really want middleware-like behavior, you can easily implement it in your own project. </span>
@@ -185,6 +186,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Contributing", href: "./contributing" }} />
+        <Footer previous={{ label: "Contributing", href: base("/contributing") }} />
     {/snippet}
 </Page>

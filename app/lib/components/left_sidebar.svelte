@@ -31,12 +31,13 @@
 </style>
 
 <script lang="ts">
+    import Icon from "$lib/components/icons/icon.svelte"
     import Link from "$lib/components/links/link.svelte"
     import MenuItem from "$lib/components/menu_item.svelte"
+    import { base } from "$lib/scripts/base"
     import type { View } from "$lib/scripts/core/view"
     import { mdiArrowRight, mdiCloudRefresh } from "@mdi/js"
     import { getContext } from "svelte"
-    import Icon from "./icons/icon.svelte"
     const view = getContext("view") as View<unknown>
     type Item = { text: string; viewName: string; href: string }
 </script>
@@ -61,19 +62,19 @@
 {/snippet}
 
 <div class="left-sidebar">
-    {@render item({ text: "Get Started", viewName: "GetStarted", href: "./get_started" })}
-    {@render item({ text: "Basics", viewName: "Basics", href: "./basics" })}
-    {@render item({ text: "Web Sockets", viewName: "WebSockets", href: "./web_sockets" })}
-    {@render item({ text: "Server Sent Events", viewName: "ServerSentEvents", href: "./server_sent_events" })}
-    {@render item({ text: "Guards", viewName: "Guards", href: "./guards" })}
-    {@render item({ text: "Views", viewName: "Views", href: "./views" })}
-    {@render item({ text: "Web Standards", viewName: "WebStandards", href: "./web_standards" })}
-    {@render item({ text: "Cli", viewName: "Cli", href: "./cli" })}
-    {@render item({ text: "Type Definitions", viewName: "TypeDefinitions", href: "./type_definitions" })}
-    {@render item({ text: "Snapshots", viewName: "Snapshots", href: "./snapshots" })}
-    {@render item({ text: "Todos Example", viewName: "TodosExample", href: "./todos_example" })}
-    {@render item({ text: "Docker", viewName: "Docker", href: "./docker" })}
-    {@render item({ text: "Issues", viewName: "Issues", href: "./issues" })}
-    {@render item({ text: "Contributing", viewName: "Contributing", href: "./contributing" })}
-    {@render item({ text: "Faq", viewName: "Faq", href: "./faq" })}
+    {@render item({ text: "Get Started", viewName: "GetStarted", href: base("/get_started") })}
+    {@render item({ text: "Basics", viewName: "Basics", href: base("/basics") })}
+    {@render item({ text: "Web Sockets", viewName: "WebSockets", href: base("/web_sockets") })}
+    {@render item({ text: "Server Sent Events", viewName: "ServerSentEvents", href: base("/server_sent_events") })}
+    {@render item({ text: "Guards", viewName: "Guards", href: base("/guards") })}
+    {@render item({ text: "Views", viewName: "Views", href: base("/views") })}
+    {@render item({ text: "Web Standards", viewName: "WebStandards", href: base("/web_standards") })}
+    {@render item({ text: "Cli", viewName: "Cli", href: base("/cli") })}
+    {@render item({ text: "Type Definitions", viewName: "TypeDefinitions", href: base("/type_definitions") })}
+    {@render item({ text: "Snapshots", viewName: "Snapshots", href: base("/snapshots") })}
+    {@render item({ text: "Todos Example", viewName: "TodosExample", href: base("/todos_example") })}
+    {@render item({ text: "Docker", viewName: "Docker", href: base("/docker") })}
+    {@render item({ text: "Issues", viewName: "Issues", href: base("/issues") })}
+    {@render item({ text: "Contributing", viewName: "Contributing", href: base("/contributing") })}
+    {@render item({ text: "Faq", viewName: "Faq", href: base("/faq") })}
 </div>

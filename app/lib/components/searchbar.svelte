@@ -90,10 +90,10 @@
 
 <script lang="ts">
     import Icon from "$lib/components/icons/icon.svelte"
+    import SearchbarResults from "$lib/components/searchbar_results.svelte"
     import { find } from "$lib/scripts/searchbar/find"
     import { mdiTextSearch } from "@mdi/js"
     import { onMount } from "svelte"
-    import SearchbarResults from "./searchbar_results.svelte"
     type Props = {
         query: string
         focused: boolean

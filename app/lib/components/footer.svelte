@@ -72,9 +72,9 @@
 </style>
 
 <script lang="ts">
+    import Icon from "$lib/components/icons/icon.svelte"
+    import Link from "$lib/components/links/link.svelte"
     import { mdiArrowLeft, mdiArrowRight, mdiCloudRefresh } from "@mdi/js"
-    import Icon from "./icons/icon.svelte"
-    import Link from "./links/link.svelte"
     type Props = {
         previous?: { label: string; href: string }
         next?: { label: string; href: string }

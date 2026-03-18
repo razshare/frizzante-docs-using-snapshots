@@ -5,6 +5,7 @@
     import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
+    import { base } from "$lib/scripts/base"
 </script>
 
 <Page title="Server Sent Events">
@@ -61,8 +62,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Web Sockets", href: "./web_sockets" }}
-            next={{ label: "Guards", href: "./guards" }}
+            previous={{ label: "Web Sockets", href: base("/web_sockets") }}
+            next={{ label: "Guards", href: base("/guards") }}
         />
     {/snippet}
 </Page>
