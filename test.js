@@ -6004,7 +6004,7 @@ function Cli($$renderer, $$props) {
             frizzante help
         `
           });
-          $$renderer3.push(`<!----> <span>Shows the complete list of available commands.</span> `);
+          $$renderer3.push(`<!----> <span>Shows the complete list of available commands (WIP).</span> `);
           Title($$renderer3, { text: "Interactive Mode" });
           $$renderer3.push(`<!----> `);
           Code($$renderer3, { lang: "sh", source: "frizzante" });

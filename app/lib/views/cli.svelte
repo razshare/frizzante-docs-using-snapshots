@@ -434,7 +434,7 @@
             frizzante help
         `}
     />
-    <span>Shows the complete list of available commands.</span>
+    <span>Shows the complete list of available commands (WIP).</span>
     <Title text="Interactive Mode" />
     <Code lang="sh" source="frizzante" />
     <span>
