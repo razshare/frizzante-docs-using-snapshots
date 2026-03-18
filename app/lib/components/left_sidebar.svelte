@@ -61,39 +61,39 @@
 {/snippet}
 
 <div class="left-sidebar">
-    {@render item({ text: "Get Started", viewName: "GetStarted", href: "/frizzante-docs-using-snapshots/get_started" })}
-    {@render item({ text: "Basics", viewName: "Basics", href: "/frizzante-docs-using-snapshots/basics" })}
-    {@render item({ text: "Web Sockets", viewName: "WebSockets", href: "/frizzante-docs-using-snapshots/web_sockets" })}
+    {@render item({ text: "Get Started", viewName: "GetStarted", href: "/get_started" })}
+    {@render item({ text: "Basics", viewName: "Basics", href: "/basics" })}
+    {@render item({ text: "Web Sockets", viewName: "WebSockets", href: "/web_sockets" })}
     {@render item({
         text: "Server Sent Events",
         viewName: "ServerSentEvents",
-        href: "/frizzante-docs-using-snapshots/server_sent_events",
+        href: "/server_sent_events",
     })}
-    {@render item({ text: "Guards", viewName: "Guards", href: "/frizzante-docs-using-snapshots/guards" })}
-    {@render item({ text: "Views", viewName: "Views", href: "/frizzante-docs-using-snapshots/views" })}
+    {@render item({ text: "Guards", viewName: "Guards", href: "/guards" })}
+    {@render item({ text: "Views", viewName: "Views", href: "/views" })}
     {@render item({
         text: "Web Standards",
         viewName: "WebStandards",
-        href: "/frizzante-docs-using-snapshots/web_standards",
+        href: "/web_standards",
     })}
-    {@render item({ text: "Cli", viewName: "Cli", href: "/frizzante-docs-using-snapshots/cli" })}
+    {@render item({ text: "Cli", viewName: "Cli", href: "/cli" })}
     {@render item({
         text: "Type Definitions",
         viewName: "TypeDefinitions",
-        href: "/frizzante-docs-using-snapshots/type_definitions",
+        href: "/type_definitions",
     })}
-    {@render item({ text: "Snapshots", viewName: "Snapshots", href: "/frizzante-docs-using-snapshots/snapshots" })}
+    {@render item({ text: "Snapshots", viewName: "Snapshots", href: "/snapshots" })}
     {@render item({
         text: "Todos Example",
         viewName: "TodosExample",
-        href: "/frizzante-docs-using-snapshots/todos_example",
+        href: "/todos_example",
     })}
-    {@render item({ text: "Docker", viewName: "Docker", href: "/frizzante-docs-using-snapshots/docker" })}
-    {@render item({ text: "Issues", viewName: "Issues", href: "/frizzante-docs-using-snapshots/issues" })}
+    {@render item({ text: "Docker", viewName: "Docker", href: "/docker" })}
+    {@render item({ text: "Issues", viewName: "Issues", href: "/issues" })}
     {@render item({
         text: "Contributing",
         viewName: "Contributing",
-        href: "/frizzante-docs-using-snapshots/contributing",
+        href: "/contributing",
     })}
-    {@render item({ text: "Faq", viewName: "Faq", href: "/frizzante-docs-using-snapshots/faq" })}
+    {@render item({ text: "Faq", viewName: "Faq", href: "/faq" })}
 </div>

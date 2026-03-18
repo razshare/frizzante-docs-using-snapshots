@@ -1,9 +1,9 @@
-import{f as d,a as u,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";import{L as ps}from"./navbar.js";import{C as Ie}from"./caution.js";import{C as r}from"./code.js";import{P as us,T as a,R as ms,F as gs}from"./right_sidebar.js";import{I as s}from"./inline_code.js";import{N as f}from"./note.js";import{T as Ge}from"./tip.js";var fs=d("<span>Please <!> such incidents if you can.</span>"),_s=d('<span>Sending header fields or status after sending out content is not allowed.</span> <br/> <span>Read <a href="#order-of-oprations">below</a>.</span>',1),hs=d("<span>You can also use a <!> tag, it will match the field correctly as if it were a <!> tag.</span> <br/> <span>This is so that you can integrate your structs more easily with other libraries that only take into account <!> formats.</span>",1),ws=d("<span>Form structs can define slices and files.</span> <!> <span>You can open and read the file.</span> <!> <span>Remember to close your files.</span> <!>",1),bs=d("<span>The session id is retrieved from the client’s session-id cookie.</span> <span>If the client doesn’t provide such cookie, <!> creates a new session id and sends the cookie to the client.</span>",1),Ss=d(`<span>Since <!> might send a cookie to the client, it is important to remember
+import{f as d,a as m,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";import{L as ps}from"./navbar.js";import{C as Ge}from"./caution.js";import{C as r}from"./code.js";import{P as ms,T as a,R as us,F as gs}from"./right_sidebar.js";import{I as s}from"./inline_code.js";import{N as f}from"./note.js";import{T as je}from"./tip.js";var fs=d("<span>Please <!> such incidents if you can.</span>"),_s=d('<span>Sending header fields or status after sending out content is not allowed.</span> <br/> <span>Read <a href="#order-of-oprations">below</a>.</span>',1),hs=d("<span>You can also use a <!> tag, it will match the field correctly as if it were a <!> tag.</span> <br/> <span>This is so that you can integrate your structs more easily with other libraries that only take into account <!> formats.</span>",1),ws=d("<span>Form structs can define slices and files.</span> <!> <span>You can open and read the file.</span> <!> <span>Remember to close your files.</span> <!>",1),bs=d("<span>The session id is retrieved from the client’s session-id cookie.</span> <span>If the client doesn’t provide such cookie, <!> creates a new session id and sends the cookie to the client.</span>",1),Ss=d(`<span>Since <!> might send a cookie to the client, it is important to remember
             that order of operations matters.</span>`),ks=d("The session is retrieved using <!>.",1),xs=d(`<!> <span>All internals of the framework are exposed intentionally.</span> <br/> <br/> <span>For example the frizzante <a href="#server">server</a> is a wrapper around <!> and a frizzante <a href="#messages">client</a> is a wrapper around <!> and <!>.</span> <br/> <br/> <span>You can interact with these internals and you are, in fact, intended to do so whenever the framework is
         insufficient, you're hitting a performance wall, a bug and so on.</span> <!> <!> <span>Create a new server with <!>, then followup with servers.Start() in order to
         start a server.</span> <!> <!> <span>Each server exposes a slice of Routes which you can freely modify.</span> <br/> <span>You can add a new route by appending to or overwriting <!>.</span> <!> <span>Where <!> is a function pointer.</span> <!> <!> <span>Route patterns can define dynamic path fields using <!> syntax.</span> <!> <span>Path fields can then be retrieved with <!>.</span> <!> <!> <span>Use <!> to retrieve messages sent by the client.</span> <!> <span>Use <!> to send a message to the client.</span> <!> <!> <span>Use <!> to retrieve header fields sent by the client.</span> <!> <span>Use <!> to send header fields to the client.</span> <!> <!> <span>Use <!> to send the status of the response to the client.</span> <!> <!> <!> <span>Order of operations matters when sending data to the client.</span> <br/> <span>For example, sending the status code with <!> after you’ve already sent content with <!> is not allowed.</span> <!> <span><!> will fail and the client will receive status 200 instead of 404.</span> <!> <span>The failure is logged to the server’s error logger.</span> <br/> <span>Assuming you’re using the default error logger, you’ll see an error of sorts in your <strong>console</strong></span> <!> <span><!>, meaning the status code has already been sent to the client and
         there’s nothing you can do about it.</span> <!> <span>Use <!> to retrieve query fields.</span> <!> <!> <span>Use <!> to parse incoming content as multipart form or url encoded form when using <!> and <!> http verbs.</span> <!> <!> <!> <!> <!> <span>Use <!> to parse incoming content as json when using POST and PUT http verbs and <!> to send json content.</span> <!> <!> <!> <span>Use <!> to retrieve cookies and <!> to send
-        them.</span> <!> <!> <span>Use <!> to retrieve the client’s session id.</span> <!> <!> <!> <!> <span>Use <!> to retrieve the client’s session.</span> <!> <!> <!> <span>Use <!> to redirect to a different location.</span> <!> <!> <span>Use <!> to redirect to a different location with status 302.</span> <!>`,1);function Ms(je){us(je,{title:"Basics",rightSidebar:p=>{ms(p,{items:[{shift:0,text:"Basics"},{shift:0,text:"Server"},{shift:0,text:"Routes"},{shift:0,text:"Path Fields"},{shift:0,text:"Messages"},{shift:0,text:"Headers"},{shift:0,text:"Status"},{shift:0,text:"Order of Operations"},{shift:0,text:"Queries"},{shift:0,text:"Forms"},{shift:0,text:"Json"},{shift:0,text:"Cookies"},{shift:0,text:"Session Id"},{shift:0,text:"Session"},{shift:0,text:"Redirect"},{shift:0,text:"Navigate"}]})},footer:p=>{gs(p,{previous:{label:"Get Started",href:"/frizzante-docs-using-snapshots/get_started"},next:{label:"Web Sockets",href:"/frizzante-docs-using-snapshots/web_sockets"}})},children:(p,Rs)=>{var _=xs(),h=u(_);a(h,{text:"Basics"});var w=e(h,8),b=e(n(w),3);s(b,{source:"net/http.Server"});var S=e(b,4);s(S,{source:"net/http.Request"});var Ae=e(S,2);s(Ae,{source:"net/http.ResponseWriter"});var k=e(w,8);f(k,{children:(o,v)=>{var t=fs(),i=e(n(t));ps(i,{href:"/frizzante-docs-using-snapshots/issues",children:(c,m)=>{var g=vs("report");l(c,g)},$$slots:{default:!0}}),l(o,t)}});var x=e(k,2);a(x,{text:"Server"});var C=e(x,2),Je=e(n(C));s(Je,{source:"servers.New()"});var y=e(C,2);r(y,{lang:"go",source:`
+        them.</span> <!> <!> <span>Use <!> to retrieve the client’s session id.</span> <!> <!> <!> <!> <span>Use <!> to retrieve the client’s session.</span> <!> <!> <!> <span>Use <!> to redirect to a different location.</span> <!> <!> <span>Use <!> to redirect to a different location with status 302.</span> <!>`,1);function Ms(Ae){ms(Ae,{title:"Basics",rightSidebar:p=>{us(p,{items:[{shift:0,text:"Basics"},{shift:0,text:"Server"},{shift:0,text:"Routes"},{shift:0,text:"Path Fields"},{shift:0,text:"Messages"},{shift:0,text:"Headers"},{shift:0,text:"Status"},{shift:0,text:"Order of Operations"},{shift:0,text:"Queries"},{shift:0,text:"Forms"},{shift:0,text:"Json"},{shift:0,text:"Cookies"},{shift:0,text:"Session Id"},{shift:0,text:"Session"},{shift:0,text:"Redirect"},{shift:0,text:"Navigate"}]})},footer:p=>{gs(p,{previous:{label:"Get Started",href:"/get_started"},next:{label:"Web Sockets",href:"/web_sockets"}})},children:(p,Rs)=>{var _=xs(),h=m(_);a(h,{text:"Basics"});var w=e(h,8),b=e(n(w),3);s(b,{source:"net/http.Server"});var S=e(b,4);s(S,{source:"net/http.Request"});var ze=e(S,2);s(ze,{source:"net/http.ResponseWriter"});var k=e(w,8);f(k,{children:(o,v)=>{var t=fs(),i=e(n(t));ps(i,{href:"/issues",children:(c,u)=>{var g=vs("report");l(c,g)},$$slots:{default:!0}}),l(o,t)}});var x=e(k,2);a(x,{text:"Server"});var C=e(x,2),Je=e(n(C));s(Je,{source:"servers.New()"});var y=e(C,2);r(y,{lang:"go",source:`
             package main
 
             import "main/lib/core/servers"
@@ -46,7 +46,7 @@ import{f as d,a as u,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";impo
             func View(client *clients.Client) {
                 _ = receive.Path(client, "name") // Retrieves field "name".
             }
-        `});var z=e(M,2);a(z,{text:"Messages"});var O=e(z,2),Ye=e(n(O));s(Ye,{source:"receive.Message()"});var I=e(O,2);r(I,{lang:"go",source:`
+        `});var O=e(M,2);a(O,{text:"Messages"});var I=e(O,2),Ye=e(n(I));s(Ye,{source:"receive.Message()"});var G=e(I,2);r(G,{lang:"go",source:`
             package welcome
 
             import (
@@ -57,7 +57,7 @@ import{f as d,a as u,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";impo
             func View(client *clients.Client) {
                 _ = receive.Message(client) // Retrieves message.
             }
-        `});var G=e(I,2),qe=e(n(G));s(qe,{source:"send.Message()"});var j=e(G,2);r(j,{lang:"go",source:`
+        `});var j=e(G,2),qe=e(n(j));s(qe,{source:"send.Message()"});var A=e(j,2);r(A,{lang:"go",source:`
             package welcome
 
             import (
@@ -68,7 +68,7 @@ import{f as d,a as u,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";impo
             func View(client *clients.Client) {
                 send.Message(client, "Hello.") // Sends message.
             }
-        `});var A=e(j,2);a(A,{text:"Headers"});var J=e(A,2),Le=e(n(J));s(Le,{source:"receive.Header()"});var D=e(J,2);r(D,{lang:"go",source:`
+        `});var z=e(A,2);a(z,{text:"Headers"});var J=e(z,2),Le=e(n(J));s(Le,{source:"receive.Header()"});var D=e(J,2);r(D,{lang:"go",source:`
             package welcome
 
             import (
@@ -104,7 +104,7 @@ import{f as d,a as u,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";impo
                 send.Status(client, 404)           // Sends status 404.
                 send.Message(client, "Not found.") // Sends message.
             }
-        `});var L=e(q,2);Ie(L,{children:(o,v)=>{var t=_s();l(o,t)}});var W=e(L,2);a(W,{text:"Order of Operations"});var K=e(W,6),X=e(n(K));s(X,{source:"send.Status()"});var Xe=e(X,2);s(Xe,{source:"send.Message()"});var Z=e(K,2);r(Z,{lang:"go",source:`
+        `});var L=e(q,2);Ge(L,{children:(o,v)=>{var t=_s();l(o,t)}});var W=e(L,2);a(W,{text:"Order of Operations"});var K=e(W,6),X=e(n(K));s(X,{source:"send.Status()"});var Xe=e(X,2);s(Xe,{source:"send.Message()"});var Z=e(K,2);r(Z,{lang:"go",source:`
             package welcome
 
             import (
@@ -161,14 +161,14 @@ import{f as d,a as u,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";impo
                 receive.Form(client, &form)                // Retrieves form.
                 send.Message(client, "Hello " + form.Name) // Sends message.
             }
-        `});var ue=e(pe,2);Ge(ue,{children:(o,v)=>{var t=hs(),i=u(t),c=e(n(i));s(c,{source:"json"});var m=e(c,2);s(m,{source:"form"});var g=e(i,4),ds=e(n(g));s(ds,{source:"json"}),l(o,t)}});var me=e(ue,2);Ge(me,{children:(o,v)=>{var t=ws(),i=e(u(t),2);r(i,{lang:"go",source:'\n                type Form struct {\n                    Name     string               `form:"name"`\n                    Comments []string             `form:"comments"` // slice of strings\n                    File     multipart.FileHeader `form:"file"`     // file handler\n                }\n            '});var c=e(i,4);r(c,{lang:"go",source:`
+        `});var me=e(pe,2);je(me,{children:(o,v)=>{var t=hs(),i=m(t),c=e(n(i));s(c,{source:"json"});var u=e(c,2);s(u,{source:"form"});var g=e(i,4),ds=e(n(g));s(ds,{source:"json"}),l(o,t)}});var ue=e(me,2);je(ue,{children:(o,v)=>{var t=ws(),i=e(m(t),2);r(i,{lang:"go",source:'\n                type Form struct {\n                    Name     string               `form:"name"`\n                    Comments []string             `form:"comments"` // slice of strings\n                    File     multipart.FileHeader `form:"file"`     // file handler\n                }\n            '});var c=e(i,4);r(c,{lang:"go",source:`
                 src, _ := form.File.Open()
                 dst, _ := os.Create("my-file.txt")
                 io.Copy(src, dst)
-            `});var m=e(c,4);r(m,{lang:"go",source:`
+            `});var u=e(c,4);r(u,{lang:"go",source:`
                 defer src.Close()
                 defer dst.Close()
-            `}),l(o,t)}});var ge=e(me,2);a(ge,{text:"Json"});var fe=e(ge,2),_e=e(n(fe));s(_e,{source:"receive.Json()"});var rs=e(_e,2);s(rs,{source:"send.Json()"});var he=e(fe,2);r(he,{lang:"go",source:`
+            `}),l(o,t)}});var ge=e(ue,2);a(ge,{text:"Json"});var fe=e(ge,2),_e=e(n(fe));s(_e,{source:"receive.Json()"});var rs=e(_e,2);s(rs,{source:"send.Json()"});var he=e(fe,2);r(he,{lang:"go",source:`
             routes.Route{Pattern: "POST /", Handler: welcome.View}
             // or
             routes.Route{Pattern: "PUT /", Handler: welcome.View}
@@ -214,7 +214,7 @@ import{f as d,a as u,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";impo
             func View(client *clients.Client) {
                 _ = receive.SessionId(client) // Retrieves session id.
             }
-        `});var Pe=e(Re,2);f(Pe,{children:(o,v)=>{var t=bs(),i=e(u(t),2),c=e(n(i));s(c,{source:"receive.SessionId()"}),l(o,t)}});var Te=e(Pe,2);Ie(Te,{children:(o,v)=>{var t=Ss(),i=e(n(t));s(i,{source:"receive.SessionId()"}),l(o,t)}});var Ve=e(Te,2);a(Ve,{text:"Session"});var $e=e(Ve,2),os=e(n($e));s(os,{source:"receive.Session()"});var He=e($e,2);f(He,{children:(o,v)=>{var t=ks(),i=e(u(t));s(i,{source:"receive.SessionId()"}),l(o,t)}});var Fe=e(He,2);r(Fe,{lang:"go",source:`
+        `});var Pe=e(Re,2);f(Pe,{children:(o,v)=>{var t=bs(),i=e(m(t),2),c=e(n(i));s(c,{source:"receive.SessionId()"}),l(o,t)}});var Te=e(Pe,2);Ge(Te,{children:(o,v)=>{var t=Ss(),i=e(n(t));s(i,{source:"receive.SessionId()"}),l(o,t)}});var Ve=e(Te,2);a(Ve,{text:"Session"});var $e=e(Ve,2),os=e(n($e));s(os,{source:"receive.Session()"});var He=e($e,2);f(He,{children:(o,v)=>{var t=ks(),i=e(m(t));s(i,{source:"receive.SessionId()"}),l(o,t)}});var Fe=e(He,2);r(Fe,{lang:"go",source:`
             package welcome
 
             import (
@@ -237,7 +237,7 @@ import{f as d,a as u,s as e,e as n,b as l,t as vs}from"./index-DcfPEVm2.js";impo
             func View(client *clients.Client) {
                 send.Redirect(client, "/login", 307) // Redirects to /login.
             }
-        `});var ze=e(Me,2);a(ze,{text:"Navigate"});var Oe=e(ze,2),cs=e(n(Oe));s(cs,{source:"send.Navigate()"});var ls=e(Oe,2);r(ls,{lang:"go",source:`
+        `});var Oe=e(Me,2);a(Oe,{text:"Navigate"});var Ie=e(Oe,2),cs=e(n(Ie));s(cs,{source:"send.Navigate()"});var ls=e(Ie,2);r(ls,{lang:"go",source:`
             package welcome
 
             import (

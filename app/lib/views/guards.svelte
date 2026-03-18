@@ -101,8 +101,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Server Sent Events", href: "/frizzante-docs-using-snapshots/server_sent_events" }}
-            next={{ label: "Views", href: "/frizzante-docs-using-snapshots/views" }}
+            previous={{ label: "Server Sent Events", href: "/server_sent_events" }}
+            next={{ label: "Views", href: "/views" }}
         />
     {/snippet}
 </Page>

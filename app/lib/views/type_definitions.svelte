@@ -15,7 +15,7 @@
     <Title text="Type Definitions" />
     <span>
         It is possible, but not required, to generate TypeScript type definitions from Go structs using
-        <a {...href("/frizzante-docs-using-snapshots/cli#plugins")}>cli plugins</a> and
+        <a {...href("/cli#plugins")}>cli plugins</a> and
         <InlineCode source="types.Generate[T]()" />, where T is the type you wish to generate.
     </span>
     <br />
@@ -98,9 +98,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer
-            previous={{ label: "Cli", href: "/frizzante-docs-using-snapshots/cli" }}
-            next={{ label: "Snapshots", href: "/frizzante-docs-using-snapshots/snapshots" }}
-        />
+        <Footer previous={{ label: "Cli", href: "/cli" }} next={{ label: "Snapshots", href: "/snapshots" }} />
     {/snippet}
 </Page>

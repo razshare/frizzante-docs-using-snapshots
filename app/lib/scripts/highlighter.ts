@@ -9,6 +9,7 @@ export async function highlighter() {
                 import("@shikijs/langs/javascript"),
                 import("@shikijs/langs/go"),
                 import("@shikijs/langs/sh"),
+                import("@shikijs/langs/css"),
                 import("@shikijs/langs/bash"),
                 import("@shikijs/langs/svelte"),
                 import("@shikijs/langs/typescript"),

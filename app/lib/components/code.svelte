@@ -21,7 +21,7 @@
 </style>
 
 <script lang="ts">
-    import { highlighter } from "$lib/scripts/shiki"
+    import { highlighter } from "$lib/scripts/highlighter"
     import { type BundledLanguage } from "shiki"
     import { onMount } from "svelte"
     type Props = {

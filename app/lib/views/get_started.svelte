@@ -59,6 +59,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer next={{ label: "Basics", href: "/frizzante-docs-using-snapshots/basics" }} />
+        <Footer next={{ label: "Basics", href: "/basics" }} />
     {/snippet}
 </Page>

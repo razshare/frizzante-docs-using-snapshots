@@ -60,9 +60,6 @@
         <RightSidebar items={[{ shift: 0, text: "Server Sent Events" }]} />
     {/snippet}
     {#snippet footer()}
-        <Footer
-            previous={{ label: "Web Sockets", href: "/frizzante-docs-using-snapshots/web_sockets" }}
-            next={{ label: "Guards", href: "/frizzante-docs-using-snapshots/guards" }}
-        />
+        <Footer previous={{ label: "Web Sockets", href: "/web_sockets" }} next={{ label: "Guards", href: "/guards" }} />
     {/snippet}
 </Page>

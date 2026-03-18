@@ -59,7 +59,7 @@
     </ul>
     <span>
         For more details see the
-        <a href="/frizzante-docs-using-snapshots/guards">guards page</a>.
+        <a href="/guards">guards page</a>.
     </span>
     <Title type="h5" text="Middleware Implementation" />
     <span> If you really want middleware-like behavior, you can easily implement it in your own project. </span>
@@ -185,6 +185,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Contributing", href: "/frizzante-docs-using-snapshots/contributing" }} />
+        <Footer previous={{ label: "Contributing", href: "/contributing" }} />
     {/snippet}
 </Page>

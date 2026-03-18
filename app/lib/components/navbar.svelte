@@ -78,7 +78,7 @@
 
 <div class="navbar">
     <div class="navbar-menu-link" class:hidden={noMenuLink}>
-        <a {...href("/frizzante-docs-using-snapshots/full-screen-menu")}>
+        <a {...href("/full-screen-menu")}>
             <Icon path={mdiFunction} size="2rem" />
         </a>
     </div>
