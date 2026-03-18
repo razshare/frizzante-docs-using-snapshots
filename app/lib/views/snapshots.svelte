@@ -154,7 +154,7 @@
         <span>
             Run the frizzante cli and point it to the <InlineCode source="GET /@statics" /> route.
         </span>
-        <Code lang="bash" source="frizzante generate snapshot http://127.0.0.1:8080/@statics .gen/snapshot" />
+        <Code lang="bash" source="frizzante generate snapshot http://127.0.0.1:8080/@statics" />
         <span>
             This will retrieve the list of static routes from
             <InlineCode source="http://127.0.0.1:8080/@statics" /> and generate the output in
