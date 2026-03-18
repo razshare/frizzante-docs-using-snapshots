@@ -204,11 +204,7 @@
         <br />
         <span>
             You can publish the <InlineCode source=".gen/snapshot" />
-            directory to a CDN or any other web file server like
-            <a target="_blank" href="https://docs.github.com/en/pages">GitHub Pages</a>,
-            <a target="_blank" href="https://docs.gitlab.com/user/project/pages">GitLab Pages</a>,
-            <a target="_blank" href="https://neocities.org">Neocities</a>
-            and your website should render statically.
+            directory to a CDN and your website should render statically.
         </span>
     </KeyedSection>
     {#snippet rightSidebar()}
