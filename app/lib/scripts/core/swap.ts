@@ -11,7 +11,6 @@ export async function swap(target: HTMLAnchorElement | HTMLFormElement, view: Vi
     const body: Record<string, string> = {}
     if (target.nodeName === "A") {
         const anchor = target as HTMLAnchorElement
-        requestUrl = anchor.href
         const parts = anchor.href.split("#", 2)
         requestUrl = parts[0]
         if (view.type === "snapshot") {
