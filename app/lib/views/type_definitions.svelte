@@ -16,7 +16,7 @@
     <Title text="Type Definitions" />
     <span>
         It is possible, but not required, to generate TypeScript type definitions from Go structs using
-        <a {...href("/cli#plugins")}>cli plugins</a> and
+        <a {...href(base("/cli#plugins"))}>cli plugins</a> and
         <InlineCode source="types.Generate[T]()" />, where T is the type you wish to generate.
     </span>
     <br />
