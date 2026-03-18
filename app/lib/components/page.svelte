@@ -8,8 +8,9 @@
         rightSidebar: Snippet
         footer: Snippet
         children: Snippet
+        dev: boolean
     }
-    let { title, children, rightSidebar: sidebar, footer: pageFooter }: Props = $props()
+    let { title, children, rightSidebar: sidebar, footer: pageFooter, dev }: Props = $props()
     let searchQuery: string = $state("")
     let searchFocused: boolean = $state(false)
     onMount(function start() {
@@ -36,7 +37,7 @@
 
 <Layout {title}>
     {#snippet navbar()}
-        <Navbar bind:search={searchQuery} bind:focused={searchFocused} />
+        <Navbar bind:search={searchQuery} bind:focused={searchFocused} {dev} />
     {/snippet}
     {#snippet content()}
         {@render children()}
@@ -45,7 +46,7 @@
         {@render pageFooter()}
     {/snippet}
     {#snippet leftSidebar()}
-        <LeftSidebar />
+        <LeftSidebar {dev} />
     {/snippet}
     {#snippet rightSidebar()}
         {@render sidebar()}

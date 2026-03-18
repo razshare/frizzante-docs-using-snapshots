@@ -6,9 +6,10 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/base"
+    let { dev } = $props()
 </script>
 
-<Page title="Web Standards">
+<Page title="Web Standards" {dev}>
     <Title text="Web Standards" />
     <span>
         You can use <InlineCode source="href()" /> and <InlineCode source="action()" />
@@ -38,7 +39,7 @@
     <span>
         On the other hand, when JavaScript is enabled, <InlineCode source="<a>" />
         will render to an anchor that overrides the default behavior of the browser. Instead of navigating away immediately,
-        <a href={base("/some-other-page")}>fetch</a> is used to retrieve the contents of
+        <a href={base("/some-other-page", { dev })}>fetch</a> is used to retrieve the contents of
         <InlineCode source="/some-other-page" /> and update the current state and view based on the server’s response.
     </span>
     <br />
@@ -242,6 +243,9 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Views", href: base("/views") }} next={{ label: "Cli", href: base("/cli") }} />
+        <Footer
+            previous={{ label: "Views", href: base("/views", { dev }) }}
+            next={{ label: "Cli", href: base("/cli", { dev }) }}
+        />
     {/snippet}
 </Page>

@@ -10,9 +10,11 @@
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/base"
     import { mdiPackage } from "@mdi/js"
+    let { dev } = $props()
+    console.log({ dev })
 </script>
 
-<Page title="Get Started">
+<Page title="Get Started" {dev}>
     <Title text="Get Started" />
     <KeyedSection key="1" description="Install frizzante.">
         <Code lang="bash" source="go install github.com/razshare/frizzante@latest" />
@@ -60,6 +62,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer next={{ label: "Basics", href: base("/basics") }} />
+        <Footer next={{ label: "Basics", href: base("/basics", { dev }) }} />
     {/snippet}
 </Page>

@@ -98,8 +98,9 @@
         query: string
         focused: boolean
         placeholder?: string
+        dev: boolean
     }
-    let { query = $bindable(""), focused = $bindable(false), placeholder = "" }: Props = $props()
+    let { query = $bindable(""), focused = $bindable(false), placeholder = "", dev }: Props = $props()
     let suggestions = $derived(find(query))
     let input: HTMLInputElement | undefined
     function onfocus() {
@@ -174,7 +175,7 @@
     {#if query !== ""}
         <div class="results">
             <div class="searchbar-results">
-                <SearchbarResults {suggestions} />
+                <SearchbarResults {suggestions} {dev} />
             </div>
         </div>
     {/if}

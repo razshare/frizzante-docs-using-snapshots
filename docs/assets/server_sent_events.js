@@ -1,4 +1,4 @@
-import{p as f,f as h,a as S,s,b,c as _,g as c,d,e as w}from"./index-CBalJl4v.js";import{i as k,b as g}from"./navbar.js";import{C as a}from"./code.js";import{P as $,T as E,R as T,F as x}from"./right_sidebar.js";import{I as C}from"./inline_code.js";var H=h("<!> <span>Use <!> to upgrade the connection to server sent events.</span> <!> <!> <span>Then consume the stream on the client.</span> <!>",1);function F(m,v){f(v,!1),k(),$(m,{title:"Server Sent Events",rightSidebar:e=>{T(e,{items:[{shift:0,text:"Server Sent Events"}]})},footer:e=>{{let n=d(()=>({label:"Web Sockets",href:g("/web_sockets")})),t=d(()=>({label:"Guards",href:g("/guards")}));x(e,{get previous(){return c(n)},get next(){return c(t)}})}},children:(e,n)=>{var t=H(),r=S(t);E(r,{text:"Server Sent Events"});var o=s(r,2),p=s(w(o));C(p,{source:"send.SseUpgrade()"});var i=s(o,2);a(i,{lang:"go",source:'routes.Route{Pattern: "GET /sse", Handler: welcome.View}'});var l=s(i,2);a(l,{lang:"go",source:`
+import{p,f,a as S,s,b,c as _,g as d,u as g,h as w}from"./index-CQxZXpNM.js";import{C as a}from"./code.js";import{P as k,T as E,R as T,F as x}from"./right_sidebar.js";import{I as C}from"./inline_code.js";import{b as v}from"./navbar.js";var H=f("<!> <span>Use <!> to upgrade the connection to server sent events.</span> <!> <!> <span>Then consume the stream on the client.</span> <!>",1);function G(m,t){p(t,!0),k(m,{title:"Server Sent Events",get dev(){return t.dev},rightSidebar:e=>{T(e,{items:[{shift:0,text:"Server Sent Events"}]})},footer:e=>{{let r=g(()=>({label:"Web Sockets",href:v("/web_sockets",{dev:t.dev})})),n=g(()=>({label:"Guards",href:v("/guards",{dev:t.dev})}));x(e,{get previous(){return d(r)},get next(){return d(n)}})}},children:(e,r)=>{var n=H(),o=S(n);E(o,{text:"Server Sent Events"});var i=s(o,2),u=s(w(i));C(u,{source:"send.SseUpgrade()"});var l=s(i,2);a(l,{lang:"go",source:'routes.Route{Pattern: "GET /sse", Handler: welcome.View}'});var c=s(l,2);a(c,{lang:"go",source:`
             package welcome
 
             import (
@@ -19,7 +19,7 @@ import{p as f,f as h,a as S,s,b,c as _,g as c,d,e as w}from"./index-CBalJl4v.js"
                     time.Sleep(time.Second)         // Sleeps for 1 second.
                 }
             }
-        `});var u=s(l,4);a(u,{lang:"svelte",source:`
+        `});var h=s(c,4);a(h,{lang:"svelte",source:`
         <script lang="ts">
             const messages: string[] = $state([]) // Creates reactive list of messages.
             const socket = new WebSocket("/ws")   // Connects to handler.
@@ -34,4 +34,4 @@ import{p as f,f as h,a as S,s,b,c as _,g as c,d,e as w}from"./index-CBalJl4v.js"
         {#each messages as message, id (id)}      <!-- Iterates the list of messages. -->
             <div>{message}</div>                  <!-- Renders message. -->
         {/each}
-    `}),b(e,t)},$$slots:{rightSidebar:!0,footer:!0,default:!0}}),_()}export{F as default};
+    `}),b(e,n)},$$slots:{rightSidebar:!0,footer:!0,default:!0}}),_()}export{G as default};

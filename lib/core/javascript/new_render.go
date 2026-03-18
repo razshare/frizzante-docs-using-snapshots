@@ -3,12 +3,14 @@ package javascript
 import (
 	"errors"
 	"fmt"
+	"os"
 	"strings"
 
-	"github.com/dop251/goja"
 	"main/lib/core/security"
 	"main/lib/core/views"
 	"main/lib/dev/types"
+
+	"github.com/dop251/goja"
 )
 
 func NewRender(options NewRenderOptions) (render Render, err error) {
@@ -32,14 +34,6 @@ func NewRender(options NewRenderOptions) (render Render, err error) {
 	}
 	if err = console.Set("warn", CreateLogger(CreateLoggerOptions{
 		Level:    LogLevelWarning,
-		Runtime:  runtime,
-		ErrorLog: options.ErrorLog,
-		InfoLog:  options.InfoLog,
-	})); err != nil {
-		return
-	}
-	if err = console.Set("error", CreateLogger(CreateLoggerOptions{
-		Level:    LogLevelDanger,
 		Runtime:  runtime,
 		ErrorLog: options.ErrorLog,
 		InfoLog:  options.InfoLog,
@@ -79,6 +73,7 @@ func NewRender(options NewRenderOptions) (render Render, err error) {
 		const globalThis={crypto:{subtle:{digest:hash_256_627f0c8d3f2158f776f550ab47b35de9}}};
 	`
 	script := fmt.Sprintf("%s\n%s\nfrizzante_set_render(render)", strings.TrimSpace(bootstrap), source)
+	_ = os.WriteFile("test.js", []byte(script), os.ModePerm)
 	var prog *goja.Program
 	if prog, err = goja.Compile("app.server.js", script, false); err != nil {
 		return

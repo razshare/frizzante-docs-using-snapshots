@@ -1,7 +1,6 @@
 import { prefix } from "$pages"
-export function base(path: string): string {
-    const dev = window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost"
-    if (dev) {
+export function base(path: string, options: { dev: boolean }): string {
+    if (options.dev) {
         return path
     }
     const suffix = path.replace(/^\/+/, "")

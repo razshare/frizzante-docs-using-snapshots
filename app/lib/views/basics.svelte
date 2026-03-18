@@ -10,9 +10,10 @@
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/base"
+    let { dev } = $props()
 </script>
 
-<Page title="Basics">
+<Page title="Basics" {dev}>
     <Title text="Basics" />
     <span> All internals of the framework are exposed intentionally. </span>
     <br />
@@ -29,7 +30,7 @@
         insufficient, you're hitting a performance wall, a bug and so on.
     </span>
     <Note>
-        <span>Please <Link href={base("/issues")}>report</Link> such incidents if you can.</span>
+        <span>Please <Link href={base("/issues", { dev })}>report</Link> such incidents if you can.</span>
     </Note>
     <Title text="Server" />
     <span>
@@ -508,8 +509,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Get Started", href: base("/get_started") }}
-            next={{ label: "Web Sockets", href: base("/web_sockets") }}
+            previous={{ label: "Get Started", href: base("/get_started", { dev }) }}
+            next={{ label: "Web Sockets", href: base("/web_sockets", { dev }) }}
         />
     {/snippet}
 </Page>

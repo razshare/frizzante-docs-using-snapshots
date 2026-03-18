@@ -11,9 +11,10 @@
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/base"
     import { mdiApplication } from "@mdi/js"
+    let { dev } = $props()
 </script>
 
-<Page title="Docker">
+<Page title="Docker" {dev}>
     <Title text="Docker" />
     <span>A Docker solution is available for both development and production deployment.</span>
     <Title type="h3" text="Get Started" />
@@ -115,8 +116,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Todos Example", href: base("/todos_example") }}
-            next={{ label: "Issues", href: base("/issues") }}
+            previous={{ label: "Todos Example", href: base("/todos_example", { dev }) }}
+            next={{ label: "Issues", href: base("/issues", { dev }) }}
         />
     {/snippet}
 </Page>

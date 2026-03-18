@@ -73,13 +73,14 @@
         search: string
         focused: boolean
         noMenuLink?: boolean
+        dev: boolean
     }
-    let { search = $bindable(""), focused = $bindable(false), noMenuLink = false }: Props = $props()
+    let { search = $bindable(""), focused = $bindable(false), noMenuLink = false, dev }: Props = $props()
 </script>
 
 <div class="navbar">
     <div class="navbar-menu-link" class:hidden={noMenuLink}>
-        <a {...href(base("/full-screen-menu"))}>
+        <a {...href(base("/full-screen-menu", { dev }))}>
             <Icon path={mdiFunction} size="2rem" />
         </a>
     </div>
@@ -89,7 +90,7 @@
     <div class="navbar-title">Frizzante Docs</div>
     <div class="navbar-searchbar">
         {#if IS_BROWSER}
-            <Searchbar bind:query={search} bind:focused placeholder="Search" />
+            <Searchbar bind:query={search} bind:focused placeholder="Search" {dev} />
         {/if}
     </div>
     <div class="navbar-links">

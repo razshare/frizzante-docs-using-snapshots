@@ -40,6 +40,7 @@
     import { getContext } from "svelte"
     const view = getContext("view") as View<unknown>
     type Item = { text: string; viewName: string; href: string }
+    let { dev } = $props()
 </script>
 
 {#snippet item(item: Item)}
@@ -62,19 +63,23 @@
 {/snippet}
 
 <div class="left-sidebar">
-    {@render item({ text: "Get Started", viewName: "GetStarted", href: base("/get_started") })}
-    {@render item({ text: "Basics", viewName: "Basics", href: base("/basics") })}
-    {@render item({ text: "Web Sockets", viewName: "WebSockets", href: base("/web_sockets") })}
-    {@render item({ text: "Server Sent Events", viewName: "ServerSentEvents", href: base("/server_sent_events") })}
-    {@render item({ text: "Guards", viewName: "Guards", href: base("/guards") })}
-    {@render item({ text: "Views", viewName: "Views", href: base("/views") })}
-    {@render item({ text: "Web Standards", viewName: "WebStandards", href: base("/web_standards") })}
-    {@render item({ text: "Cli", viewName: "Cli", href: base("/cli") })}
-    {@render item({ text: "Type Definitions", viewName: "TypeDefinitions", href: base("/type_definitions") })}
-    {@render item({ text: "Snapshots", viewName: "Snapshots", href: base("/snapshots") })}
-    {@render item({ text: "Todos Example", viewName: "TodosExample", href: base("/todos_example") })}
-    {@render item({ text: "Docker", viewName: "Docker", href: base("/docker") })}
-    {@render item({ text: "Issues", viewName: "Issues", href: base("/issues") })}
-    {@render item({ text: "Contributing", viewName: "Contributing", href: base("/contributing") })}
-    {@render item({ text: "Faq", viewName: "Faq", href: base("/faq") })}
+    {@render item({ text: "Get Started", viewName: "GetStarted", href: base("/get_started", { dev }) })}
+    {@render item({ text: "Basics", viewName: "Basics", href: base("/basics", { dev }) })}
+    {@render item({ text: "Web Sockets", viewName: "WebSockets", href: base("/web_sockets", { dev }) })}
+    {@render item({
+        text: "Server Sent Events",
+        viewName: "ServerSentEvents",
+        href: base("/server_sent_events", { dev }),
+    })}
+    {@render item({ text: "Guards", viewName: "Guards", href: base("/guards", { dev }) })}
+    {@render item({ text: "Views", viewName: "Views", href: base("/views", { dev }) })}
+    {@render item({ text: "Web Standards", viewName: "WebStandards", href: base("/web_standards", { dev }) })}
+    {@render item({ text: "Cli", viewName: "Cli", href: base("/cli", { dev }) })}
+    {@render item({ text: "Type Definitions", viewName: "TypeDefinitions", href: base("/type_definitions", { dev }) })}
+    {@render item({ text: "Snapshots", viewName: "Snapshots", href: base("/snapshots", { dev }) })}
+    {@render item({ text: "Todos Example", viewName: "TodosExample", href: base("/todos_example", { dev }) })}
+    {@render item({ text: "Docker", viewName: "Docker", href: base("/docker", { dev }) })}
+    {@render item({ text: "Issues", viewName: "Issues", href: base("/issues", { dev }) })}
+    {@render item({ text: "Contributing", viewName: "Contributing", href: base("/contributing", { dev }) })}
+    {@render item({ text: "Faq", viewName: "Faq", href: base("/faq", { dev }) })}
 </div>

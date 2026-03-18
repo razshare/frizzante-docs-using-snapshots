@@ -6,9 +6,10 @@
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/base"
+    let { dev } = $props()
 </script>
 
-<Page title="Contributing">
+<Page title="Contributing" {dev}>
     <Title text="Contributing" />
     <span>
         This document describes the full process of setting up a fully working local development environment and
@@ -91,6 +92,9 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Issues", href: base("/issues") }} next={{ label: "Faq", href: base("/faq") }} />
+        <Footer
+            previous={{ label: "Issues", href: base("/issues", { dev }) }}
+            next={{ label: "Faq", href: base("/faq", { dev }) }}
+        />
     {/snippet}
 </Page>

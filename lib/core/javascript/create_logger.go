@@ -4,8 +4,9 @@ import (
 	"log"
 	"strings"
 
-	"github.com/dop251/goja"
 	"main/lib/core/stack"
+
+	"github.com/dop251/goja"
 )
 
 func CreateLogger(options CreateLoggerOptions) func(call goja.FunctionCall) goja.Value {
@@ -32,10 +33,10 @@ func CreateLogger(options CreateLoggerOptions) func(call goja.FunctionCall) goja
 				marshalData, err = object.MarshalJSON()
 				if err != nil {
 					options.ErrorLog.Printf(
-					"javascript.CreateLogger: failed to marshal JavaScript object to JSON: %v\n%s",
-					err,
-					stack.Trace(),
-				)
+						"javascript.CreateLogger: failed to marshal JavaScript object to JSON: %v\n%s",
+						err,
+						stack.Trace(),
+					)
 					return goja.Undefined()
 				}
 				builder.WriteString(string(marshalData))

@@ -9,9 +9,10 @@
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/base"
+    let { dev } = $props()
 </script>
 
-<Page title="Snapshots">
+<Page title="Snapshots" {dev}>
     <Title text="Snapshots" />
     <span>You can take a snapshot of a server using the cli and statically generate your website.</span>
     <br />
@@ -221,8 +222,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Type Definitions", href: base("/type_definitions") }}
-            next={{ label: "Todos Example", href: base("/todos_example") }}
+            previous={{ label: "Type Definitions", href: base("/type_definitions", { dev }) }}
+            next={{ label: "Todos Example", href: base("/todos_example", { dev }) }}
         />
     {/snippet}
 </Page>

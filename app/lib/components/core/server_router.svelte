@@ -1,7 +1,7 @@
 <script lang="ts">
-    import { setContext, type Component } from "svelte"
     import { views } from "$exports.server"
     import type { View } from "$lib/scripts/core/view.d.ts"
+    import { setContext, type Component } from "svelte"
     let { name, props, render, align, type }: View<Record<string, unknown>> = $props()
     const components = views as unknown as Record<string, Component>
     // svelte-ignore state_referenced_locally

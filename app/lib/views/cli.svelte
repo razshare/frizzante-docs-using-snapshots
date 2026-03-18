@@ -10,9 +10,10 @@
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/base"
     import { mdiApplication, mdiCodeBraces, mdiFolder } from "@mdi/js"
+    let { dev } = $props()
 </script>
 
-<Page title="Cli">
+<Page title="Cli" {dev}>
     <Title text="Cli" />
     <span>The cli provides various commands to manage your project lifecycle, from creation to deployment.</span>
     <Title text="Create Project" />
@@ -470,8 +471,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Web Standards", href: base("/web_standards") }}
-            next={{ label: "Type Definitions", href: base("/type_definitions") }}
+            previous={{ label: "Web Standards", href: base("/web_standards", { dev }) }}
+            next={{ label: "Type Definitions", href: base("/type_definitions", { dev }) }}
         />
     {/snippet}
 </Page>

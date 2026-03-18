@@ -10,13 +10,14 @@
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/base"
     import { href } from "$lib/scripts/core/href"
+    let { dev } = $props()
 </script>
 
-<Page title="Type Definitions">
+<Page title="Type Definitions" {dev}>
     <Title text="Type Definitions" />
     <span>
         It is possible, but not required, to generate TypeScript type definitions from Go structs using
-        <a {...href(base("/cli#plugins"))}>cli plugins</a> and
+        <a {...href(base("/cli#plugins", { dev }))}>cli plugins</a> and
         <InlineCode source="types.Generate[T]()" />, where T is the type you wish to generate.
     </span>
     <br />
@@ -100,8 +101,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Cli", href: base("/cli") }}
-            next={{ label: "Snapshots", href: base("/snapshots") }}
+            previous={{ label: "Cli", href: base("/cli", { dev }) }}
+            next={{ label: "Snapshots", href: base("/snapshots", { dev }) }}
         />
     {/snippet}
 </Page>
