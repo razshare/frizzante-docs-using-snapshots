@@ -374,7 +374,7 @@
     <Title text="Clean Project" />
     <Code lang="sh" source="frizzante clean-project" />
     <span>
-        Removes directories
+        Removes
         <InlineCode source=".gen" />,
         <InlineCode source="app/dist" />,
         <InlineCode source="app/.vite" />,

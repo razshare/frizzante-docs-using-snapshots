@@ -5928,7 +5928,7 @@ function Cli($$renderer, $$props) {
           Title($$renderer3, { text: "Clean Project" });
           $$renderer3.push(`<!----> `);
           Code($$renderer3, { lang: "sh", source: "frizzante clean-project" });
-          $$renderer3.push(`<!----> <span>Removes directories `);
+          $$renderer3.push(`<!----> <span>Removes `);
           Inline_code($$renderer3, { source: ".gen" });
           $$renderer3.push(`<!---->, `);
           Inline_code($$renderer3, { source: "app/dist" });
