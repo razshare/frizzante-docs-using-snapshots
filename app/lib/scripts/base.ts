@@ -1,9 +1,10 @@
+import { IS_BROWSER } from "./core/is_browser"
+
 export function base(path: string): string {
-    if (path.startsWith("./")) {
-        return path
+    const suffix = path.replace(/^\//, "")
+    const value = `./${suffix}`
+    if (IS_BROWSER) {
+        console.log(value)
     }
-    if (path.startsWith("/")) {
-        return `.${path}`
-    }
-    return `./${path}`
+    return value
 }
