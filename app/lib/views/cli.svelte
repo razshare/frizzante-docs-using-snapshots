@@ -166,7 +166,7 @@
     </FileTree>
     <Note>
         <span>
-            JavaScript packages are installed using <InlineCode source=".gen/bun/bin" /> by default. You can point to a custom
+            JavaScript packages are installed using <InlineCode source=".gen/bun/bun" /> by default. You can point to a custom
             Bun binary of your choice by setting <InlineCode source="--bun" />.
         </span>
 
@@ -195,14 +195,14 @@
     <FileTree>
         {#snippet children({ Directory, File })}
             <File name="go.mod" />
-            <Directory name="app">
+            <Directory name="app" expanded>
                 <File name="package.json" icon={mdiCodeBraces} />
             </Directory>
         {/snippet}
     </FileTree>
     <Note>
         <span>
-            JavaScript packages are updated using <InlineCode source=".gen/bun/bin" /> by default. You can point to a custom
+            JavaScript packages are updated using <InlineCode source=".gen/bun/bun" /> by default. You can point to a custom
             Bun binary of your choice by setting <InlineCode source="--bun" />
         </span>
         <span>
@@ -256,7 +256,7 @@
     </span>
     <Note>
         <span>
-            Your app directory is packaged using <InlineCode source=".gen/bun/bin" /> by default. You can point to a custom
+            Your app directory is packaged using <InlineCode source=".gen/bun/bun" /> by default. You can point to a custom
             Bun binary of your choice by setting <InlineCode source="--bun" />.
         </span>
         <br />
@@ -332,7 +332,7 @@
     </span>
     <Note>
         <span>
-            Checks are run using <InlineCode source=".gen/bun/bin" /> by default. You can point to a custom Bun binary of
+            Checks are run using <InlineCode source=".gen/bun/bun" /> by default. You can point to a custom Bun binary of
             your choice by setting <InlineCode source="--bun" />.
         </span>
         <span>
