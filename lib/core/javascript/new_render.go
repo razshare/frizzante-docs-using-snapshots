@@ -3,7 +3,6 @@ package javascript
 import (
 	"errors"
 	"fmt"
-	"os"
 	"strings"
 
 	"main/lib/core/security"
@@ -73,7 +72,6 @@ func NewRender(options NewRenderOptions) (render Render, err error) {
 		const globalThis={crypto:{subtle:{digest:hash_256_627f0c8d3f2158f776f550ab47b35de9}}};
 	`
 	script := fmt.Sprintf("%s\n%s\nfrizzante_set_render(render)", strings.TrimSpace(bootstrap), source)
-	_ = os.WriteFile("test.js", []byte(script), os.ModePerm)
 	var prog *goja.Program
 	if prog, err = goja.Compile("app.server.js", script, false); err != nil {
 		return
