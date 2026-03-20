@@ -2,7 +2,7 @@ import{p as C,f as _,a as E,s as e,i as T,b,c as I,g as M,u as R,h as y}from"./i
             details to remember as a developer</li> <li>Managing middleware execution order across different routes is complex</li></ul> <br/> <span>While guards have some advantages.</span> <br/> <ul><li><strong>Efficient</strong> <span>-</span> <span>each route has a defined slice of guards and only those guards will execute each time the route is
                 matched</span></li> <li><strong>Explicit</strong> <span>-</span> <span>since each route explicitly defines its guards, you can see exactly which guards execute for any route
                 just by looking at the slice</span></li> <li><strong>Composable</strong> <span>-</span> <span>in order to add a new guard you can just add a guard to the route’s guards slice</span></li> <li><strong>Easy to order</strong> <span>-</span> <span>it’s easy to define the order in which guards execute, you can simply move them around in the route’s
-                guards slice</span></li></ul> <span>For more details see the <a>guards page</a>.</span> <!> <span>If you really want middleware-like behavior, you can easily implement it in your own project.</span> <!> <!> <!> <!> <!> <!> <span>Yes you can, as long as Vite supports your framework.</span> <br/> <span>All you need to do is configure your <!> and <!> to render your framework.</span> <br/> <span>You can find a Vue3 example <a target="_blank" href="https://github.com/razshare/frizzante-example-vue3">here</a>.</span>`,1);function O(H,t){C(t,!0),G(H,{title:"Faq",get dev(){return t.dev},rightSidebar:a=>{S(a,{items:[{shift:0,text:"Faq"},{shift:0,text:"Why doesn’t Frizzante have middleware?"},{shift:1,text:"Middleware Implementation"},{shift:1,text:"Middleware Usage"},{shift:0,text:"Can I use Frizzante with other frontend frameworks?"}]})},footer:a=>{{let n=R(()=>({label:"Contributing",href:k("/contributing",{dev:t.dev})}));V(a,{get previous(){return M(n)}})}},children:(a,n)=>{var i=N(),l=E(i);r(l,{text:"Faq"});var d=e(l,2);r(d,{type:"h3",text:"Why doesn’t Frizzante have middleware?"});var u=e(d,20),z=e(y(u)),c=e(u,2);r(c,{type:"h5",text:"Middleware Implementation"});var m=e(c,4);o(m,{lang:"go",source:`
+                guards slice</span></li></ul> <span>For more details see the <a>guards page</a>.</span> <!> <span>If you really want middleware-like behavior, you can easily implement it in your own project.</span> <!> <!> <!> <!> <!> <!> <span>Yes you can, as long as Vite supports your framework.</span> <br/> <span>All you need to do is configure your <!> and <!> to render your framework.</span> <br/> <span>You can find a Vue3 example <a target="_blank" href="https://github.com/razshare/frizzante-example-vue3">here</a>.</span>`,1);function O(H,t){C(t,!0),G(H,{title:"Faq",get prefix(){return t.prefix},rightSidebar:a=>{S(a,{items:[{shift:0,text:"Faq"},{shift:0,text:"Why doesn’t Frizzante have middleware?"},{shift:1,text:"Middleware Implementation"},{shift:1,text:"Middleware Usage"},{shift:0,text:"Can I use Frizzante with other frontend frameworks?"}]})},footer:a=>{{let i=R(()=>({label:"Contributing",href:k("/contributing",{prefix:t.prefix})}));V(a,{get previous(){return M(i)}})}},children:(a,i)=>{var n=N(),l=E(n);r(l,{text:"Faq"});var d=e(l,2);r(d,{type:"h3",text:"Why doesn’t Frizzante have middleware?"});var u=e(d,20),z=e(y(u)),c=e(u,2);r(c,{type:"h5",text:"Middleware Implementation"});var p=e(c,4);o(p,{lang:"go",source:`
             package middlewares
 
             import "main/lib/core/clients"
@@ -12,7 +12,7 @@ import{p as C,f as _,a as E,s as e,i as T,b,c as I,g as M,u as R,h as y}from"./i
             type Middleware struct {                            // Defines a structure holding multiple hooks.
                 Hooks []Hook                                    // Defines the actual hooks slice.
             }
-        `});var p=e(m,2);o(p,{lang:"go",source:`
+        `});var m=e(p,2);o(m,{lang:"go",source:`
             package middlewares
 
             import (
@@ -35,7 +35,7 @@ import{p as C,f as _,a as E,s as e,i as T,b,c as I,g as M,u as R,h as y}from"./i
                     }
                 }
             }
-        `});var h=e(p,2);j(h,{children:(s,Y)=>{var q=D();b(s,q)}});var f=e(h,2);r(f,{type:"h5",text:"Middleware Usage"});var g=e(f,2);o(g,{lang:"go",source:`
+        `});var h=e(m,2);j(h,{children:(s,Y)=>{var q=D();b(s,q)}});var f=e(h,2);r(f,{type:"h5",text:"Middleware Usage"});var g=e(f,2);o(g,{lang:"go",source:`
             package main
 
             import (
@@ -79,4 +79,4 @@ import{p as C,f as _,a as E,s as e,i as T,b,c as I,g as M,u as R,h as y}from"./i
                     {Pattern: "GET /remove", Handler: todos.Remove},
                 }
             }
-        `});var v=e(g,2);r(v,{type:"h3",text:"Can I use Frizzante with other frontend frameworks?"});var F=e(v,6),w=e(y(F));x(w,{source:"app/app.client.ts"});var P=e(w,2);x(P,{source:"app/app.server.ts"}),T(s=>A(z,"href",s),[()=>k("/guards",{dev:t.dev})]),b(a,i)},$$slots:{rightSidebar:!0,footer:!0,default:!0}}),I()}export{O as default};
+        `});var v=e(g,2);r(v,{type:"h3",text:"Can I use Frizzante with other frontend frameworks?"});var F=e(v,6),w=e(y(F));x(w,{source:"app/app.client.ts"});var P=e(w,2);x(P,{source:"app/app.server.ts"}),T(s=>A(z,"href",s),[()=>k("/guards",{prefix:t.prefix})]),b(a,n)},$$slots:{rightSidebar:!0,footer:!0,default:!0}}),I()}export{O as default};

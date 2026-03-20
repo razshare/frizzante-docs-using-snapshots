@@ -1,4 +1,4 @@
-import{p,f,a as S,s,b,c as _,g as d,u as g,h as w}from"./index-CQxZXpNM.js";import{C as a}from"./code.js";import{P as k,T as E,R as T,F as x}from"./right_sidebar.js";import{I as C}from"./inline_code.js";import{b as v}from"./navbar.js";var H=f("<!> <span>Use <!> to upgrade the connection to server sent events.</span> <!> <!> <span>Then consume the stream on the client.</span> <!>",1);function G(m,t){p(t,!0),k(m,{title:"Server Sent Events",get dev(){return t.dev},rightSidebar:e=>{T(e,{items:[{shift:0,text:"Server Sent Events"}]})},footer:e=>{{let r=g(()=>({label:"Web Sockets",href:v("/web_sockets",{dev:t.dev})})),n=g(()=>({label:"Guards",href:v("/guards",{dev:t.dev})}));x(e,{get previous(){return d(r)},get next(){return d(n)}})}},children:(e,r)=>{var n=H(),o=S(n);E(o,{text:"Server Sent Events"});var i=s(o,2),u=s(w(i));C(u,{source:"send.SseUpgrade()"});var l=s(i,2);a(l,{lang:"go",source:'routes.Route{Pattern: "GET /sse", Handler: welcome.View}'});var c=s(l,2);a(c,{lang:"go",source:`
+import{p as u,f as h,a as S,s,b,c as _,g as d,u as g,h as x}from"./index-CQxZXpNM.js";import{C as a}from"./code.js";import{P as w,T as k,R as E,F as T}from"./right_sidebar.js";import{I as C}from"./inline_code.js";import{b as m}from"./navbar.js";var H=h("<!> <span>Use <!> to upgrade the connection to server sent events.</span> <!> <!> <span>Then consume the stream on the client.</span> <!>",1);function G(v,t){u(t,!0),w(v,{title:"Server Sent Events",get prefix(){return t.prefix},rightSidebar:e=>{E(e,{items:[{shift:0,text:"Server Sent Events"}]})},footer:e=>{{let r=g(()=>({label:"Web Sockets",href:m("/web_sockets",{prefix:t.prefix})})),n=g(()=>({label:"Guards",href:m("/guards",{prefix:t.prefix})}));T(e,{get previous(){return d(r)},get next(){return d(n)}})}},children:(e,r)=>{var n=H(),o=S(n);k(o,{text:"Server Sent Events"});var i=s(o,2),p=s(x(i));C(p,{source:"send.SseUpgrade()"});var l=s(i,2);a(l,{lang:"go",source:'routes.Route{Pattern: "GET /sse", Handler: welcome.View}'});var c=s(l,2);a(c,{lang:"go",source:`
             package welcome
 
             import (
@@ -19,7 +19,7 @@ import{p,f,a as S,s,b,c as _,g as d,u as g,h as w}from"./index-CQxZXpNM.js";impo
                     time.Sleep(time.Second)         // Sleeps for 1 second.
                 }
             }
-        `});var h=s(c,4);a(h,{lang:"svelte",source:`
+        `});var f=s(c,4);a(f,{lang:"svelte",source:`
         <script lang="ts">
             const messages: string[] = $state([]) // Creates reactive list of messages.
             const socket = new WebSocket("/ws")   // Connects to handler.

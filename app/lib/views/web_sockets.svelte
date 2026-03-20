@@ -5,11 +5,11 @@
     import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
-    import { base } from "$lib/scripts/base"
-    let { dev } = $props()
+    import { base } from "$lib/scripts/strings/base"
+    let { prefix } = $props()
 </script>
 
-<Page title="Web Sockets" {dev}>
+<Page title="Web Sockets" {prefix}>
     <Title text="Web Sockets" />
     <span>Use <InlineCode source="send.WsUpgrade()" /> to upgrade the connection to web sockets.</span>
     <Code lang="go" source={`routes.Route{Pattern: "GET /ws", Handler: welcome.View}`} />
@@ -62,8 +62,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Basics", href: base("/basics", { dev }) }}
-            next={{ label: "Server Sent Events", href: base("/server_sent_events", { dev }) }}
+            previous={{ label: "Basics", href: base("/basics", { prefix }) }}
+            next={{ label: "Server Sent Events", href: base("/server_sent_events", { prefix }) }}
         />
     {/snippet}
 </Page>

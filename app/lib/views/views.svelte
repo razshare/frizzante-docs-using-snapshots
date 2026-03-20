@@ -11,12 +11,12 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
-    import { base } from "$lib/scripts/base"
+    import { base } from "$lib/scripts/strings/base"
     import { mdiCodeBraces } from "@mdi/js"
-    let { dev } = $props()
+    let { prefix } = $props()
 </script>
 
-<Page title="Views" {dev}>
+<Page title="Views" {prefix}>
     <Title text="Views" />
     <span>
         Views are svelte components exported by <InlineCode source="app/exports.server.ts" /> and/or
@@ -311,7 +311,7 @@
         <Tip>
             <span>You can combine any of these render modes with adaptive hyperlinks and forms.</span>
             <br />
-            <span>Read more about <Link href={base("/web_standards", { dev })}>web standards</Link>.</span>
+            <span>Read more about <Link href={base("/web_standards", { prefix })}>web standards</Link>.</span>
         </Tip>
         <Tip>
             When using <InlineCode source="RenderModeFull" /> or <InlineCode source="RenderModeServer" />, You can
@@ -355,8 +355,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Guards", href: base("/guards", { dev }) }}
-            next={{ label: "Web Standards", href: base("/web_standards", { dev }) }}
+            previous={{ label: "Guards", href: base("/guards", { prefix }) }}
+            next={{ label: "Web Standards", href: base("/web_standards", { prefix }) }}
         />
     {/snippet}
 </Page>

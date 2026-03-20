@@ -1,4 +1,5 @@
 #!/usr/bin/bash
+export PREFIX="/frizzante-docs-using-snapshots"
 make build
 ./.gen/bin/app & 
 APP_PID=$!

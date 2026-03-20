@@ -18,7 +18,6 @@
         "paths": {
             "$lib/*": ["./lib/*"],
             "$gen/*": ["../.gen/*"],
-            "$pages": ["./pages.config.json"],
             "$exports.client": ["./exports.client.ts"],
             "$exports.server": ["./exports.server.ts"]
         },

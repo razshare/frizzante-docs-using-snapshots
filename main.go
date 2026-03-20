@@ -20,7 +20,7 @@ import (
 //go:embed app/dist
 var efs embed.FS
 var server = servers.New()
-var props = map[string]any{"dev": os.Getenv("DEV") == "1"}
+var props = map[string]any{"prefix": os.Getenv("PREFIX")}
 
 func main() {
 	server.Efs = efs

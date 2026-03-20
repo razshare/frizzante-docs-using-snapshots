@@ -8,11 +8,11 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
-    import { base } from "$lib/scripts/base"
-    let { dev } = $props()
+    import { base } from "$lib/scripts/strings/base"
+    let { prefix } = $props()
 </script>
 
-<Page title="Snapshots" {dev}>
+<Page title="Snapshots" {prefix}>
     <Title text="Snapshots" />
     <span>You can take a snapshot of a server using the cli and statically generate your website.</span>
     <br />
@@ -218,8 +218,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Type Definitions", href: base("/type_definitions", { dev }) }}
-            next={{ label: "Todos Example", href: base("/todos_example", { dev }) }}
+            previous={{ label: "Type Definitions", href: base("/type_definitions", { prefix }) }}
+            next={{ label: "Todos Example", href: base("/todos_example", { prefix }) }}
         />
     {/snippet}
 </Page>

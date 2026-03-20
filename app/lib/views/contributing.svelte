@@ -5,11 +5,11 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
-    import { base } from "$lib/scripts/base"
-    let { dev } = $props()
+    import { base } from "$lib/scripts/strings/base"
+    let { prefix } = $props()
 </script>
 
-<Page title="Contributing" {dev}>
+<Page title="Contributing" {prefix}>
     <Title text="Contributing" />
     <span>
         This document describes the full process of setting up a fully working local development environment and
@@ -93,8 +93,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Issues", href: base("/issues", { dev }) }}
-            next={{ label: "Faq", href: base("/faq", { dev }) }}
+            previous={{ label: "Issues", href: base("/issues", { prefix }) }}
+            next={{ label: "Faq", href: base("/faq", { prefix }) }}
         />
     {/snippet}
 </Page>

@@ -53,9 +53,9 @@
 <script lang="ts">
     import { href } from "$lib/scripts/core/href"
     import type { Suggestion } from "$lib/scripts/searchbar/suggestion"
-    type Props = Suggestion & { dev: boolean }
-    let { description, page, section, href: createSuggestionHref, dev }: Props = $props()
-    let suggestionHref = $derived(createSuggestionHref(dev))
+    type Props = Suggestion & { prefix: string }
+    let { description, page, section, href: createSuggestionHref, prefix }: Props = $props()
+    let suggestionHref = $derived(createSuggestionHref(prefix))
     let { onclick } = $derived(href(suggestionHref))
 </script>
 

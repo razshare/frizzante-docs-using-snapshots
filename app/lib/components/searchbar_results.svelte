@@ -20,15 +20,15 @@
     import type { Suggestion } from "$lib/scripts/searchbar/suggestion"
     type Props = {
         suggestions: Suggestion[]
-        dev: boolean
+        prefix: string
     }
-    let { suggestions = [], dev }: Props = $props()
+    let { suggestions = [], prefix }: Props = $props()
 </script>
 
 <div class="searchbar-results">
     {#each suggestions as suggestion, index (index)}
         <div class="suggestion">
-            <SuggestionComponent {...suggestion} {dev} />
+            <SuggestionComponent {...suggestion} {prefix} />
         </div>
     {:else}
         <span>No results found.</span>

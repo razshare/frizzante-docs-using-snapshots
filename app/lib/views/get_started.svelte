@@ -8,12 +8,12 @@
     import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
-    import { base } from "$lib/scripts/base"
+    import { base } from "$lib/scripts/strings/base"
     import { mdiPackage } from "@mdi/js"
-    let { dev } = $props()
+    let { prefix } = $props()
 </script>
 
-<Page title="Get Started" {dev}>
+<Page title="Get Started" {prefix}>
     <Title text="Get Started" />
     <KeyedSection key="1" description="Install frizzante.">
         <Code lang="bash" source="go install github.com/razshare/frizzante@latest" />
@@ -61,6 +61,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer next={{ label: "Basics", href: base("/basics", { dev }) }} />
+        <Footer next={{ label: "Basics", href: base("/basics", { prefix }) }} />
     {/snippet}
 </Page>

@@ -64,23 +64,23 @@
     import Icon from "$lib/components/icons/icon.svelte"
     import Image from "$lib/components/image.svelte"
     import Searchbar from "$lib/components/searchbar.svelte"
-    import { base } from "$lib/scripts/base"
     import { href } from "$lib/scripts/core/href"
     import { IS_BROWSER } from "$lib/scripts/core/is_browser"
     import { logo } from "$lib/scripts/logo"
+    import { base } from "$lib/scripts/strings/base"
     import { mdiFunction, mdiGithub } from "@mdi/js"
     type Props = {
         search: string
+        prefix: string
         focused: boolean
         noMenuLink?: boolean
-        dev: boolean
     }
-    let { search = $bindable(""), focused = $bindable(false), noMenuLink = false, dev }: Props = $props()
+    let { search = $bindable(""), focused = $bindable(false), noMenuLink = false, prefix }: Props = $props()
 </script>
 
 <div class="navbar">
     <div class="navbar-menu-link" class:hidden={noMenuLink}>
-        <a {...href(base("/full-screen-menu", { dev }))}>
+        <a {...href(base("/full-screen-menu", { prefix }))}>
             <Icon path={mdiFunction} size="2rem" />
         </a>
     </div>
@@ -90,7 +90,7 @@
     <div class="navbar-title">Frizzante Docs</div>
     <div class="navbar-searchbar">
         {#if IS_BROWSER}
-            <Searchbar bind:query={search} bind:focused placeholder="Search" {dev} />
+            <Searchbar bind:query={search} bind:focused placeholder="Search" {prefix} />
         {/if}
     </div>
     <div class="navbar-links">

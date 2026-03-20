@@ -12,11 +12,11 @@
     import Image from "$lib/components/image.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
-    import { base } from "$lib/scripts/base"
-    let { dev } = $props()
+    import { base } from "$lib/scripts/strings/base"
+    let { prefix } = $props()
 </script>
 
-<Page title="Guards" {dev}>
+<Page title="Guards" {prefix}>
     <Title text="Guards" />
     <span>A guard is an object that is composed of an optional name and a required handler.</span>
     <br />
@@ -103,8 +103,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Server Sent Events", href: base("/server_sent_events", { dev }) }}
-            next={{ label: "Views", href: base("/views", { dev }) }}
+            previous={{ label: "Server Sent Events", href: base("/server_sent_events", { prefix }) }}
+            next={{ label: "Views", href: base("/views", { prefix }) }}
         />
     {/snippet}
 </Page>

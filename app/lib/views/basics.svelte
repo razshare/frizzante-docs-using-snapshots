@@ -9,11 +9,11 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
-    import { base } from "$lib/scripts/base"
-    let { dev } = $props()
+    import { base } from "$lib/scripts/strings/base"
+    let { prefix } = $props()
 </script>
 
-<Page title="Basics" {dev}>
+<Page title="Basics" {prefix}>
     <Title text="Basics" />
     <span> All internals of the framework are exposed intentionally. </span>
     <br />
@@ -30,7 +30,7 @@
         insufficient, you're hitting a performance wall, a bug and so on.
     </span>
     <Note>
-        <span>Please <Link href={base("/issues", { dev })}>report</Link> such incidents if you can.</span>
+        <span>Please <Link href={base("/issues", { prefix })}>report</Link> such incidents if you can.</span>
     </Note>
     <Title text="Server" />
     <span>
@@ -509,8 +509,8 @@
     {/snippet}
     {#snippet footer()}
         <Footer
-            previous={{ label: "Get Started", href: base("/get_started", { dev }) }}
-            next={{ label: "Web Sockets", href: base("/web_sockets", { dev }) }}
+            previous={{ label: "Get Started", href: base("/get_started", { prefix }) }}
+            next={{ label: "Web Sockets", href: base("/web_sockets", { prefix }) }}
         />
     {/snippet}
 </Page>

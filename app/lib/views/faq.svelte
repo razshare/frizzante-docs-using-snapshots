@@ -6,11 +6,11 @@
     import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
-    import { base } from "$lib/scripts/base"
-    let { dev } = $props()
+    import { base } from "$lib/scripts/strings/base"
+    let { prefix } = $props()
 </script>
 
-<Page title="Faq" {dev}>
+<Page title="Faq" {prefix}>
     <Title text="Faq" />
     <Title type="h3" text="Why doesn’t Frizzante have middleware?" />
     <span>Frizzante intentionally uses guards instead of middleware.</span>
@@ -61,7 +61,7 @@
     </ul>
     <span>
         For more details see the
-        <a href={base("/guards", { dev })}>guards page</a>.
+        <a href={base("/guards", { prefix })}>guards page</a>.
     </span>
     <Title type="h5" text="Middleware Implementation" />
     <span> If you really want middleware-like behavior, you can easily implement it in your own project. </span>
@@ -187,6 +187,6 @@
         />
     {/snippet}
     {#snippet footer()}
-        <Footer previous={{ label: "Contributing", href: base("/contributing", { dev }) }} />
+        <Footer previous={{ label: "Contributing", href: base("/contributing", { prefix }) }} />
     {/snippet}
 </Page>

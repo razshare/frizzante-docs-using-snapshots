@@ -31,7 +31,7 @@
     import LeftSidebar from "$lib/components/left_sidebar.svelte"
     import Navbar from "$lib/components/navbar.svelte"
     import { onMount } from "svelte"
-    let { dev } = $props()
+    let { prefix } = $props()
     let searchQuery: string = $state("")
     let searchFocused: boolean = $state(false)
     onMount(function start() {
@@ -58,9 +58,9 @@
 
 <div class="full-screen-menu">
     <div class="full-screen-menu-content">
-        <LeftSidebar {dev} />
+        <LeftSidebar {prefix} />
     </div>
     <div class="full-screen-menu-navbar">
-        <Navbar bind:search={searchQuery} bind:focused={searchFocused} noMenuLink {dev} />
+        <Navbar bind:search={searchQuery} bind:focused={searchFocused} noMenuLink {prefix} />
     </div>
 </div>
