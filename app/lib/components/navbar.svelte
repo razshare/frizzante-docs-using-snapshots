@@ -8,7 +8,7 @@
         display: grid;
         gap: var(--navbar-gap);
         align-items: center;
-        grid-template-columns: auto 2fr 1.5fr 2fr auto 0;
+        grid-template-columns: auto 2fr 2fr 2fr auto 0;
         grid-template-areas: "navbar-logo navbar-title navbar-searchbar empty navbar-links navbar-menu-link";
     }
     .navbar-menu-link {

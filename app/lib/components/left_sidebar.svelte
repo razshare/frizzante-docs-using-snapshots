@@ -1,5 +1,6 @@
 <style>
     :root {
+        --left-sidebar-gap: 0.5rem;
         --left-sidebar-padding: 1rem;
         --left-sidebar-item-roundness: 1rem;
         --left-sidebar-text: #cecdc3;
@@ -7,7 +8,7 @@
     }
     .left-sidebar {
         display: grid;
-        gap: 0.5rem;
+        gap: var(--left-sidebar-gap);
         padding: var(--left-sidebar-padding);
         padding-top: 0;
     }
