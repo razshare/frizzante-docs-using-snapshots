@@ -329,13 +329,6 @@
             </Caution>
         </Tip>
     </KeyedSection>
-    <Title text="Disabling the server-side JavaScript runtime" />
-    <span>
-        You can add the <InlineCode source="no_js_runtime" /> tag to your build process to completely disable the server-side
-        JavaScript runtime.
-    </span>
-    <Code lang="shell" source="frizzante --build --tags=no_js_runtime" />
-    <span>This will reduce the minimum size of the final binary from 25MB to 10MB.</span>
     {#snippet rightSidebar()}
         <RightSidebar
             items={[
