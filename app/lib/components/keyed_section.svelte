@@ -33,6 +33,7 @@
         top: 0;
         bottom: 0;
         color: var(--indexed-section-badge-key-text);
+        font-weight: bold;
     }
     .keyed-section-badge > .keyed-section-badge-circle {
         position: relative;

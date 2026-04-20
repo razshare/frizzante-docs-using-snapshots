@@ -7,7 +7,7 @@
     }
     .left-sidebar {
         display: grid;
-        gap: 0.3rem;
+        gap: 0.5rem;
         padding: var(--left-sidebar-padding);
         padding-top: 0;
     }
@@ -24,6 +24,7 @@
     .active {
         opacity: 1;
         color: var(--left-sidebar-text-active);
+        font-weight: bold;
     }
 </style>
 

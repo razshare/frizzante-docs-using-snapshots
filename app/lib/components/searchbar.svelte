@@ -1,12 +1,12 @@
 <style>
     :root {
-        --searchbar-text: #c0c0c0;
+        --searchbar-text: #6e6e6e;
         --searchbar-text-focused: #c0c0c0;
-        --searchbar-gap: 0.1rem;
-        --searchbar-border: 1px solid #5f5e5a;
+        --searchbar-border: 1px solid #6e6e6e;
         --searchbar-border-focused: 1px solid #c0c0c0;
         --searchbar-roundness: 1rem;
         --searchbar-padding: 0.5rem;
+        --searchbar-gap: 0.1rem;
         --searchbar-results-background: #0b0a0a;
         --searchbar-results-roundness: 1rem;
         --searchbar-results-padding: 1rem;
@@ -38,6 +38,10 @@
         pointer-events: none;
         align-items: center;
         left: var(--searchbar-padding);
+        color: var(--searchbar-text);
+    }
+    .icon.focused {
+        color: var(--searchbar-text-focused);
     }
     .text {
         grid-area: text;
@@ -49,6 +53,7 @@
         outline: none;
         color: inherit;
         width: 100%;
+        color: var(--searchbar-text);
     }
     .text.focused {
         color: var(--searchbar-text-focused);

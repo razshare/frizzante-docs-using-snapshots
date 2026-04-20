@@ -1,6 +1,7 @@
 <style>
     :root {
-        --title-text: #a2dece;
+        --title-text: #cecdc3;
+        --title-link: #a2dece;
     }
     .title {
         display: grid;
@@ -23,6 +24,7 @@
     }
     .title-icon {
         opacity: 0;
+        color: var(--title-link);
     }
     .title-icon.visible {
         opacity: 1;
@@ -49,15 +51,15 @@
     function typeToSize(tag: string): string {
         switch (tag) {
             case "h1":
-                return "2.5rem"
-            case "h2":
-                return "2.2rem"
-            case "h3":
                 return "2rem"
-            case "h4":
-                return "1.7rem"
-            case "h5":
+            case "h2":
+                return "1.8rem"
+            case "h3":
                 return "1.5rem"
+            case "h4":
+                return "1.3rem"
+            case "h5":
+                return "1.1rem"
             default:
                 return "1rem"
         }

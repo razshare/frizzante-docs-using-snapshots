@@ -26,6 +26,7 @@
         font-size: var(--navbar-tile-size);
         align-items: center;
         display: grid;
+        font-weight: bold;
     }
     .navbar-searchbar {
         grid-area: navbar-searchbar;

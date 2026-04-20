@@ -1,7 +1,7 @@
 <style>
     :root {
         --layout-padding: 1rem;
-        --layout-navbar-background: rgba(0, 0, 0, 0.3);
+        --layout-navbar-background: #100f0f;
     }
     .layout {
         display: grid;
