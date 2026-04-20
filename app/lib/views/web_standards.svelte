@@ -16,6 +16,8 @@
         in order to make your hyperlinks and forms adapt to the client’s browser capabilities and/or the server’s rendering
         configuration.
     </span>
+    <br />
+    <br />
     <Title text="Adaptive Hyperlinks" />
     <Code
         lang="svelte"

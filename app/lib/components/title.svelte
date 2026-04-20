@@ -13,13 +13,13 @@
         align-items: center;
         font-weight: bold;
         margin-bottom: 1rem;
+        color: var(--title-text);
     }
     .title:hover {
         text-decoration: none;
     }
     .title-text {
         grid-area: text;
-        color: var(--title-text);
     }
     .title-icon {
         opacity: 0;
