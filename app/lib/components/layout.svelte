@@ -7,8 +7,8 @@
         display: grid;
         position: fixed;
         top: 0;
-        left: 600px;
-        right: 600px;
+        left: 0;
+        right: 0;
         bottom: 0;
         grid-template-columns: 15rem auto 15rem;
         grid-template-rows: auto 1fr auto;
@@ -16,28 +16,26 @@
             "layout-navbar layout-navbar layout-navbar"
             "layout-left-sidebar layout-body layout-right-sidebar";
     }
-    @media screen and (max-width: 2100px) {
+    @media screen and (min-width: 980px) {
         .layout {
-            left: 400px;
-            right: 400px;
+            left: 0;
+            right: 0;
         }
     }
-    @media screen and (max-width: 1980px) {
+    @media screen and (min-width: 1600px) {
         .layout {
             left: 200px;
             right: 200px;
         }
     }
-    @media screen and (max-width: 1600px) {
+    @media screen and (min-width: 2400px) {
         .layout {
-            left: 0;
-            right: 0;
+            left: 500px;
+            right: 500px;
         }
     }
     @media screen and (max-width: 980px) {
         .layout {
-            left: 0;
-            right: 0;
             grid-template-columns: 15rem auto 1rem;
         }
         .layout-right-sidebar {
