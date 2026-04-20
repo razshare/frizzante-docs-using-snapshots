@@ -342,7 +342,6 @@
                 { shift: 1, text: "RenderModeFull" },
                 { shift: 1, text: "RenderModeServer" },
                 { shift: 1, text: "RenderModeClient" },
-                { shift: 0, text: "Disabling the server-side JavaScript runtime" },
             ]}
         />
     {/snippet}
