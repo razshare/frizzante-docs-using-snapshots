@@ -5,12 +5,12 @@
     import Footer from "$lib/components/footer.svelte"
     import InlineCode from "$lib/components/inline_code.svelte"
     import KeyedSection from "$lib/components/keyed_section.svelte"
-    import Link from "$lib/components/links/link.svelte"
     import Note from "$lib/components/note.svelte"
     import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
+    import { href } from "$lib/scripts/core/href"
     import { base } from "$lib/scripts/strings/base"
     import { mdiCodeBraces } from "@mdi/js"
     let { prefix } = $props()
@@ -311,7 +311,7 @@
         <Tip>
             <span>You can combine any of these render modes with adaptive hyperlinks and forms.</span>
             <br />
-            <span>Read more about <Link href={base("/web_standards", { prefix })}>web standards</Link>.</span>
+            <span>Read more about <a {...href(base("/web_standards", { prefix }))}>web standards</a>.</span>
         </Tip>
         <Tip>
             When using <InlineCode source="RenderModeFull" /> or <InlineCode source="RenderModeServer" />, You can

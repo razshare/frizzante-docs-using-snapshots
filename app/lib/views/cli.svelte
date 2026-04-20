@@ -438,8 +438,8 @@
     <Title text="Interactive Mode" />
     <Code lang="sh" source="frizzante" />
     <span>
-        Running <InlineCode source="frizzante" /> without any flags starts an interactive menu where you can select commands
-        using arrow keys.
+        Running <InlineCode source="frizzante" /> without any parameters or flags starts an interactive menu where you can
+        select commands using arrow keys.
     </span>
     <Note>
         <span>This is useful if</span>

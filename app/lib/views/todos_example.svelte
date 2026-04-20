@@ -24,7 +24,8 @@
     <span>The starter template comes with a todos application.</span>
     <br />
     <br />
-    <Image src={gif1} width="500px" />
+    <Image src={gif1} width="auto" />
+    <br />
     <Title text="Main" />
     <span>The server defines a few routes.</span>
     <Code
@@ -46,7 +47,9 @@
     />
     <Title text="Fallback" />
     <span>The <InlineCode source="GET /" /> pattern acts as a fallback.</span>
-    <Image src={diagram1} width="100%" />
+    <br />
+    <Image src={diagram1} width="auto" />
+    <br />
     <span>
         With that in mind, the fallback handler tries to send back a matching file using
         <InlineCode source="send.RequestedFile()" />

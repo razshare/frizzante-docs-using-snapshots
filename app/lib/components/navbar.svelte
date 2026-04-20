@@ -1,6 +1,7 @@
 <style>
     :root {
         --navbar-title-text: #a2dece;
+        --navbar-tile-size: 1.5rem;
         --navbar-gap: 1rem;
     }
     .navbar {
@@ -12,7 +13,6 @@
     }
     .navbar-menu-link {
         grid-area: navbar-menu-link;
-        color: var(--navbar-title-text);
         display: none;
     }
     .navbar-logo {
@@ -21,6 +21,7 @@
     .navbar-title {
         grid-area: navbar-title;
         color: var(--navbar-title-text);
+        font-size: var(--navbar-tile-size);
     }
     .navbar-searchbar {
         grid-area: navbar-searchbar;
@@ -46,7 +47,6 @@
             display: block;
             padding-left: 1rem;
             position: relative;
-            top: 0.15rem;
         }
         .navbar-logo {
             display: none;

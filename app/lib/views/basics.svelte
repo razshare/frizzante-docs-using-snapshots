@@ -3,12 +3,12 @@
     import Code from "$lib/components/code.svelte"
     import Footer from "$lib/components/footer.svelte"
     import InlineCode from "$lib/components/inline_code.svelte"
-    import Link from "$lib/components/links/link.svelte"
     import Note from "$lib/components/note.svelte"
     import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
+    import { href } from "$lib/scripts/core/href"
     import { base } from "$lib/scripts/strings/base"
     let { prefix } = $props()
 </script>
@@ -30,7 +30,7 @@
         insufficient, you're hitting a performance wall, a bug and so on.
     </span>
     <Note>
-        <span>Please <Link href={base("/issues", { prefix })}>report</Link> such incidents if you can.</span>
+        <span>Please <a {...href(base("/issues", { prefix }))}>report</a> such incidents if you can.</span>
     </Note>
     <Title text="Server" />
     <span>
