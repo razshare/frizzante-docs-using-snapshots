@@ -240,7 +240,7 @@
     <Caution>
         <span>Sending header fields or status after sending out content is not allowed.</span>
         <br />
-        <span>Read <a href="#order-of-oprations">below</a>.</span>
+        <span>Read <a href="#order-of-operations">below</a>.</span>
     </Caution>
     <Title text="Order of Operations" />
     <span>Order of operations matters when sending data to the client.</span>
