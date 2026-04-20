@@ -60,6 +60,7 @@
     }
     .layout-body-content {
         z-index: 0;
+        padding-top: var(--layout-padding);
     }
     .layout-body-footer {
         z-index: 0;

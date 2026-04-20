@@ -1,6 +1,6 @@
 <style>
     :root {
-        --searchbar-text: #5f5e5a;
+        --searchbar-text: #c0c0c0;
         --searchbar-text-focused: #c0c0c0;
         --searchbar-gap: 0.1rem;
         --searchbar-border: 1px solid #5f5e5a;

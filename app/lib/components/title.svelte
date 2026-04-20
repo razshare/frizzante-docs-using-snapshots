@@ -11,31 +11,21 @@
         grid-area: link;
         display: grid;
         align-items: center;
+        font-weight: bold;
+        margin-bottom: 1rem;
     }
     .title:hover {
         text-decoration: none;
     }
-    .text {
+    .title-text {
         grid-area: text;
         color: var(--title-text);
     }
-    h1 {
-        font-size: 2.5rem;
+    .title-icon {
+        opacity: 0;
     }
-    h2 {
-        font-size: 2.2rem;
-    }
-    h3 {
-        font-size: 2rem;
-    }
-    h4 {
-        font-size: 1.7rem;
-    }
-    h5 {
-        font-size: 1.5rem;
-    }
-    h6 {
-        font-size: 1rem;
+    .title-icon.visible {
+        opacity: 1;
     }
     .no-margin {
         margin: 0;
@@ -91,36 +81,34 @@
 </script>
 
 <a class="title" href="#{id}" {onmouseover} {onmouseout} {onfocus} {onblur}>
-    <div class="text" style="font-size:{typeToSize(tag)}">
+    <div class="title-text" style="font-size:{typeToSize(tag)}">
         {#if tag === "h1"}
-            <h1 {id} class:no-margin={noMargin}>
+            <span {id} class:no-margin={noMargin}>
                 <span>{text}</span>
-            </h1>
+            </span>
         {:else if tag === "h2"}
-            <h2 {id} class:no-margin={noMargin}>
+            <span {id} class:no-margin={noMargin}>
                 <span>{text}</span>
-            </h2>
+            </span>
         {:else if tag === "h3"}
-            <h3 {id} class:no-margin={noMargin}>
+            <span {id} class:no-margin={noMargin}>
                 <span>{text}</span>
-            </h3>
+            </span>
         {:else if tag === "h4"}
-            <h4 {id} class:no-margin={noMargin}>
+            <span {id} class:no-margin={noMargin}>
                 <span>{text}</span>
-            </h4>
+            </span>
         {:else if tag === "h5"}
-            <h5 {id} class:no-margin={noMargin}>
+            <span {id} class:no-margin={noMargin}>
                 <span>{text}</span>
-            </h5>
+            </span>
         {:else}
-            <h6 {id} class:no-margin={noMargin}>
+            <span {id} class:no-margin={noMargin}>
                 <span>{text}</span>
-            </h6>
+            </span>
         {/if}
     </div>
-    <div class="icon">
-        {#if hovered}
-            <Icon path={mdiLinkVariant} size={typeToSize(tag)} />
-        {/if}
+    <div class="title-icon" class:visible={hovered}>
+        <Icon path={mdiLinkVariant} size={typeToSize(tag)} />
     </div>
 </a>

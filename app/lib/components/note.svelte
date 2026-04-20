@@ -24,16 +24,21 @@
         margin-bottom: var(--note-margin);
     }
     .note-icon {
+        display: grid;
+        align-items: center;
         grid-area: note-icon;
         color: var(--note-icon);
     }
     .note-title {
+        display: grid;
+        align-items: center;
         grid-area: note-title;
         color: var(--note-title);
-        padding-left: var(--note-padding);
+        padding-left: calc(var(--note-padding) / 4);
     }
     .note-content {
         grid-area: note-content;
+        padding-top: calc(var(--note-padding) / 2);
     }
 </style>
 
@@ -47,7 +52,7 @@
 
 <div class="note">
     <div class="note-icon">
-        <Icon path={mdiInformationOutline} size="1.5rem" />
+        <Icon path={mdiInformationOutline} size="1.4rem" />
     </div>
     <div class="note-title">Note</div>
     <div class="note-content">{@render children()}</div>
