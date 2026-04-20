@@ -4,6 +4,12 @@
         --footer-line-thickness: 1px;
         --footer-line-color: #cecdc3;
         --footer-gap: 1rem;
+        --footer-previous-button-text-size: 1.3rem;
+        --footer-previous-button-label-size: 2rem;
+        --footer-previous-button-label-weight: bold;
+        --footer-next-button-text-size: 1.3rem;
+        --footer-next-button-label-size: 2rem;
+        --footer-next-button-label-weight: bold;
     }
     .footer {
         padding-top: var(--footer-padding);
@@ -25,12 +31,10 @@
     .footer-previous {
         grid-area: footer-previous;
         text-align: start;
-        font-size: 1.5rem;
     }
     .footer-next {
         grid-area: footer-next;
         text-align: end;
-        font-size: 1.5rem;
     }
     .footer-previous-button {
         display: grid;
@@ -50,16 +54,21 @@
     }
     .footer-previous-button-text {
         grid-area: footer-previous-button-text;
+        font-size: var(--footer-previous-button-text-size);
     }
     .footer-previous-button-icon {
         grid-area: footer-previous-button-icon;
+        align-items: center;
+        display: grid;
     }
     .footer-previous-button-label {
         grid-area: footer-previous-button-label;
+        font-size: var(--footer-previous-button-label-size);
+        font-weight: var(--footer-previous-button-label-weight);
     }
     .footer-next-button {
         display: grid;
-        gap: 1rem;
+        gap: 0.3rem;
         padding: 1rem;
         grid-template-columns: 1fr auto;
         grid-template-areas:
@@ -75,12 +84,17 @@
     }
     .footer-next-button-text {
         grid-area: footer-next-button-text;
+        font-size: var(--footer-next-button-text-size);
     }
     .footer-next-button-icon {
         grid-area: footer-next-button-icon;
+        align-items: center;
+        display: grid;
     }
     .footer-next-button-label {
         grid-area: footer-next-button-label;
+        font-size: var(--footer-next-button-label-size);
+        font-weight: var(--footer-next-button-label-weight);
     }
     @media screen and (max-width: 980px) {
         .footer {
@@ -121,7 +135,7 @@
             <a class="footer-previous-button" {...href(previous.href)}>
                 <div class="footer-previous-button-text">Previous</div>
                 <div class="footer-previous-button-icon">
-                    <Icon path={mdiArrowLeft} />
+                    <Icon path={mdiArrowLeft} size="1.5rem" />
                 </div>
                 <div class="footer-previous-button-label">{previous.label}</div>
             </a>
@@ -132,7 +146,7 @@
             <a class="footer-next-button" {...href(next.href)}>
                 <div class="footer-next-button-text">Next</div>
                 <div class="footer-next-button-icon">
-                    <Icon path={mdiArrowRight} />
+                    <Icon path={mdiArrowRight} size="1.5rem" />
                 </div>
                 <div class="footer-next-button-label">{next.label}</div>
             </a>

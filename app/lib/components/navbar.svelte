@@ -8,7 +8,7 @@
         display: grid;
         gap: var(--navbar-gap);
         align-items: center;
-        grid-template-columns: auto 1fr 3fr 1fr auto 0;
+        grid-template-columns: auto 2fr 1.5fr 2fr auto 0;
         grid-template-areas: "navbar-logo navbar-title navbar-searchbar empty navbar-links navbar-menu-link";
     }
     .navbar-menu-link {
@@ -17,11 +17,15 @@
     }
     .navbar-logo {
         grid-area: navbar-logo;
+        align-items: center;
+        display: grid;
     }
     .navbar-title {
         grid-area: navbar-title;
         color: var(--navbar-title-text);
         font-size: var(--navbar-tile-size);
+        align-items: center;
+        display: grid;
     }
     .navbar-searchbar {
         grid-area: navbar-searchbar;
@@ -85,12 +89,12 @@
         </a>
     </div>
     <div class="navbar-logo">
-        <Image src={logo} width="32px" height="32px" alt="logo" />
+        <Image src={logo} height="2rem" alt="logo" />
     </div>
     <div class="navbar-title">Frizzante Docs</div>
     <div class="navbar-searchbar">
         {#if IS_BROWSER}
-            <Searchbar bind:query={search} bind:focused placeholder="Search" {prefix} />
+            <Searchbar bind:query={search} bind:focused placeholder="Start typing to search." {prefix} />
         {/if}
     </div>
     <div class="navbar-links">

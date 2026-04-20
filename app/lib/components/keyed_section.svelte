@@ -5,6 +5,7 @@
         --indexed-section-link-background: rgba(0, 0, 0, 0.3);
         --indexed-section-link-width: 0.3rem;
         --indexed-section-gap: 0.3rem;
+        --indexed-section-badge-key-text: inherit;
     }
     .keyed-section {
         display: grid;
@@ -31,6 +32,7 @@
         right: 0;
         top: 0;
         bottom: 0;
+        color: var(--indexed-section-badge-key-text);
     }
     .badge > .circle {
         position: relative;
@@ -77,8 +79,8 @@
 
 <div class="keyed-section">
     <div class="badge">
-        <span class="key">{key[0]}</span>
         <div class="circle"></div>
+        <span class="key">{key[0]}</span>
     </div>
     <div class="content">
         <Title type="h6" text={description} noMargin />

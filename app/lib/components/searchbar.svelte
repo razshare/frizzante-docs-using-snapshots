@@ -2,7 +2,7 @@
     :root {
         --searchbar-text: #5f5e5a;
         --searchbar-text-focused: #c0c0c0;
-        --searchbar-gap: 1rem;
+        --searchbar-gap: 0.1rem;
         --searchbar-border: 1px solid #5f5e5a;
         --searchbar-border-focused: 1px solid #c0c0c0;
         --searchbar-roundness: 1rem;
@@ -53,13 +53,6 @@
     .text.focused {
         color: var(--searchbar-text-focused);
     }
-    .shortcut {
-        grid-area: shortcut;
-        pointer-events: none;
-        display: grid;
-        align-items: center;
-        padding-right: var(--searchbar-padding);
-    }
     .results {
         position: absolute;
         background: var(--searchbar-results-background);
@@ -92,7 +85,7 @@
     import Icon from "$lib/components/icons/icon.svelte"
     import SearchbarResults from "$lib/components/searchbar_results.svelte"
     import { find } from "$lib/scripts/searchbar/find"
-    import { mdiTextSearch } from "@mdi/js"
+    import { mdiLayersSearch } from "@mdi/js"
     import { onMount } from "svelte"
     type Props = {
         query: string
@@ -158,7 +151,9 @@
 
 <div class="searchbar">
     <button class="button" class:focused>
-        <div class="icon"><Icon path={mdiTextSearch} size="1.5rem" /></div>
+        <div class="icon" class:focused>
+            <Icon path={mdiLayersSearch} size="1.5rem" />
+        </div>
         <input
             bind:this={input}
             class="text"
@@ -170,7 +165,6 @@
             onkeydown={oninputkeydown}
             {placeholder}
         />
-        <div class="shortcut">Ctrl K</div>
     </button>
     {#if query !== ""}
         <div class="results">

@@ -1,7 +1,7 @@
-import{p as ke,f as Se,a as xe,s as e,t as Fe,b as Ie,c as Ce,g as Z,u as ee,h as n}from"./index-D0lsslyH.js";import{b as p,f as Re}from"./navbar.js";import{C as t}from"./code.js";import{P as We,T as s,R as ze,F as De}from"./right_sidebar.js";import{I as r}from"./inline_code.js";var Le=Se(`<!> <span>You can use <!> and <!> in order to make your hyperlinks and forms adapt to the client’s browser capabilities and/or the server’s rendering
+import{p as X,f as Z,a as ee,s as e,t as re,b as te,c as ae,g as G,u as B,h as t}from"./index-B3gjky_M.js";import{b as s,f as ne}from"./navbar.js";import{C as a}from"./code.js";import{P as oe,T as d,R as ie,F as se}from"./right_sidebar.js";import{I as r}from"./inline_code.js";var de=Z(`<!> <span>You can use <!> and <!> in order to make your hyperlinks and forms adapt to the client’s browser capabilities and/or the server’s rendering
         configuration.</span> <!> <!> <span>When JavaScript is disabled, <!> will render as a traditional anchor, which by default will navigate the client away to <!>.</span> <br/> <span>On the other hand, when JavaScript is enabled, <!> will render to an anchor that overrides the default behavior of the browser. Instead of navigating away immediately, <a>fetch</a> is used to retrieve the contents of <!> and update the current state and view based on the server’s response.</span> <br/> <span>For example, given the following handler using <!></span> <!> <span>The view will ultimately render the following in the client’s browser.</span> <!> <span>But using <!> will instead render</span> <!> <!> <!> <span>When JavaScript is disabled, <!> will render as a traditional form, which by default will submit to <!> and navigate the client away.</span> <br/> <span>On the other hand, when JavaScript is enabled, <!> will render to a form that overrides
         the default behavior of the browser. Instead of navigating away immediately, <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API"><span>fetch</span></a> is used to submit the form to <!> and update the current state and view based on the server’s response.</span> <br/> <span>For example, given the following handler using <!>.</span> <!> <span>The view will ultimately render the following in the client’s browser.</span> <!> <span>But using <!> will instead render.</span> <!> <span>Where <!> takes care of submitting the form and fetching the new state and view
-        from <!>.</span> <!> <span>Frizzante provides a <!> component that captures pending and error states while navigating hyperlinks.</span> <br/> <span>It is a replacement for your <!> elements.</span> <br/> <span>In your project root directory, run the following</span> <!> <span>This will add the <!> component to your project.</span> <br/> <span>This component passes down <!> and <!> states through the <!> snippet.</span> <!> <!> <span>Frizzante provides a <!> component that captures pending and error states while submitting forms.</span> <br/> <span>It is a replacement for your <!> elements.</span> <br/> <span>In your project root directory, run the following</span> <!> <span>This will add the <!> component to your project.</span> <br/> <span>This component passes down pending and error states through the <!> snippet.</span> <!>`,1);function je(re,a){ke(a,!0),We(re,{title:"Web Standards",get prefix(){return a.prefix},rightSidebar:o=>{ze(o,{items:[{shift:0,text:"Web Standards"},{shift:0,text:"Adaptive Hyperlinks"},{shift:0,text:"Adaptive Forms"},{shift:0,text:"Link Component"},{shift:0,text:"Form Component"}]})},footer:o=>{{let d=ee(()=>({label:"Views",href:p("/views",{prefix:a.prefix})})),i=ee(()=>({label:"Cli",href:p("/cli",{prefix:a.prefix})}));De(o,{get previous(){return Z(d)},get next(){return Z(i)}})}},children:(o,d)=>{var i=Le(),l=xe(i);s(l,{text:"Web Standards"});var c=e(l,2),h=e(n(c));r(h,{source:"href()"});var ne=e(h,2);r(ne,{source:"action()"});var m=e(c,2);s(m,{text:"Adaptive Hyperlinks"});var v=e(m,2);t(v,{lang:"svelte",source:`
+        from <!>.</span>`,1);function fe(H,n){X(n,!0),oe(H,{title:"Web Standards",get prefix(){return n.prefix},rightSidebar:o=>{ie(o,{items:[{shift:0,text:"Web Standards"},{shift:0,text:"Adaptive Hyperlinks"},{shift:0,text:"Adaptive Forms"}]})},footer:o=>{{let l=B(()=>({label:"Views",href:s("/views",{prefix:n.prefix})})),i=B(()=>({label:"Cli",href:s("/cli",{prefix:n.prefix})}));se(o,{get previous(){return G(l)},get next(){return G(i)}})}},children:(o,l)=>{var i=de(),c=ee(i);d(c,{text:"Web Standards"});var p=e(c,2),h=e(t(p));r(h,{source:"href()"});var N=e(h,2);r(N,{source:"action()"});var v=e(p,2);d(v,{text:"Adaptive Hyperlinks"});var m=e(v,2);a(m,{lang:"svelte",source:`
             <script lang="ts">
                 import { href } from "$lib/scripts/core/href.ts"
             <\/script>
@@ -9,7 +9,7 @@ import{p as ke,f as Se,a as xe,s as e,t as Fe,b as Ie,c as Ce,g as Z,u as ee,h a
             <a {...href("/some-other-page")}> Go to some other page </a> <!-- Defines a link, which when triggered will either
                                                                               directly navigate to the given path, or do so using 
                                                                               fetch, depending on wether JavaScript is enabled or not. -->
-        `});var u=e(v,2),f=e(n(u));r(f,{source:"<a>"});var te=e(f,2);r(te,{source:"/some-other-page"});var g=e(u,4),b=e(n(g));r(b,{source:"<a>"});var w=e(b,2),ae=e(w,2);r(ae,{source:"/some-other-page"});var _=e(g,4),oe=e(n(_));r(oe,{source:"view.RenderModeServer"});var y=e(_,2);t(y,{lang:"go",source:`
+        `});var u=e(m,2),f=e(t(u));r(f,{source:"<a>"});var O=e(f,2);r(O,{source:"/some-other-page"});var g=e(u,4),b=e(t(g));r(b,{source:"<a>"});var w=e(b,2),$=e(w,2);r($,{source:"/some-other-page"});var _=e(g,4),z=e(t(_));r(z,{source:"view.RenderModeServer"});var y=e(_,2);a(y,{lang:"go",source:`
             package welcome
             
             import (
@@ -24,11 +24,11 @@ import{p as ke,f as Se,a as xe,s as e,t as Fe,b as Ie,c as Ce,g as Z,u as ee,h a
                     RenderMode: view.RenderModeServer, // Renders view only on the server.
                 })
             }
-        `});var k=e(y,4);t(k,{lang:"html",source:`
+        `});var S=e(y,4);a(S,{lang:"html",source:`
             <a href="/some-other-page"> Go to some other page </a>
-        `});var S=e(k,2),se=e(n(S));r(se,{source:"view.RenderModeFull"});var x=e(S,2);t(x,{lang:"html",source:`
+        `});var x=e(S,2),U=e(t(x));r(U,{source:"view.RenderModeFull"});var R=e(x,2);a(R,{lang:"html",source:`
             <a href="/some-other-page" onclick="onclick(event)"> Go to some other page </a>
-        `});var F=e(x,2);s(F,{text:"Adaptive Forms"});var I=e(F,2);t(I,{lang:"go",source:`
+        `});var k=e(R,2);d(k,{text:"Adaptive Forms"});var W=e(k,2);a(W,{lang:"go",source:`
             <script lang="ts">
                 import { action } from "$lib/scripts/core/action.ts"
             <\/script>
@@ -39,7 +39,7 @@ import{p as ke,f as Se,a as xe,s as e,t as Fe,b as Ie,c as Ce,g as Z,u as ee,h a
                                                            directly submit the form, or do so using fetch(),
                                                            depending on wether JavaScript is enabled or not. -->
             </form>
-        `});var C=e(I,2),R=e(n(C));r(R,{source:"<form>"});var ie=e(R,2);r(ie,{source:"/process"});var W=e(C,4),z=e(n(W));r(z,{source:"<form>"});var pe=e(z,4);r(pe,{source:"/process"});var D=e(W,4),de=e(n(D));r(de,{source:"view.RenderModeServer"});var L=e(D,2);t(L,{lang:"go",source:`
+        `});var F=e(W,2),M=e(t(F));r(M,{source:"<form>"});var Y=e(M,2);r(Y,{source:"/process"});var V=e(F,4),A=e(t(V));r(A,{source:"<form>"});var j=e(A,4);r(j,{source:"/process"});var I=e(V,4),q=e(t(I));r(q,{source:"view.RenderModeServer"});var J=e(I,2);a(J,{lang:"go",source:`
             package welcome
 
             import (
@@ -54,48 +54,14 @@ import{p as ke,f as Se,a as xe,s as e,t as Fe,b as Ie,c as Ce,g as Z,u as ee,h a
                     RenderMode: view.RenderModeServer, // Renders view only on the server.
                 })
             }
-        `});var T=e(L,4);t(T,{lang:"html",source:`
+        `});var C=e(J,4);a(C,{lang:"html",source:`
             <form action="/process">
                 <input type="text" name="name" />
                 <button type="submit">Submit</button>
             </form>
-        `});var M=e(T,2),le=e(n(M));r(le,{source:"view.RenderModeFull"});var V=e(M,2);t(V,{lang:"html",source:`
+        `});var P=e(C,2),E=e(t(P));r(E,{source:"view.RenderModeFull"});var D=e(P,2);a(D,{lang:"html",source:`
             <form action="/process" onsubmit="onsubmit(event)">
                 <input type="text" name="name" />
                 <button type="submit">Submit</button>
             </form>
-        `});var A=e(V,2),J=e(n(A));r(J,{source:"onsubmit(event)"});var ce=e(J,2);r(ce,{source:"/process"});var P=e(A,2);s(P,{text:"Link Component"});var $=e(P,2),he=e(n($));r(he,{source:"<Link>"});var j=e($,4),me=e(n(j));r(me,{source:"<a>"});var G=e(j,6);t(G,{lang:"shell",source:"frizzante g links"});var O=e(G,2),ve=e(n(O));r(ve,{source:"<Link>"});var q=e(O,4),B=e(n(q));r(B,{source:"pending"});var H=e(B,2);r(H,{source:"error"});var ue=e(H,2);r(ue,{source:"children"});var N=e(q,2);t(N,{lang:"svelte",source:`
-            <script lang="ts">
-                import Link from "$lib/components/links/link.svelte"
-            <\/script>
-
-            <Link href="/some-path">                               <!-- Defines a link. -->
-                {#snippet children({pending, error})}              <!-- Captures the link's pending and error states. -->
-                    {#if pending}                                  <!-- If the underlying http request is pending... -->
-                        <span>Loading...</span>                    <!-- ...renders a loading hint. -->
-                    {:else if error}                               <!-- If there's been some sort of error... -->
-                        <span>Something went wrong: {error}</span> <!-- ...renders the error. -->
-                    {:else}                                        <!-- If the link is idle... -->
-                        <span>Click me</span>                      <!-- ...renders the link's idle content. -->
-                    {/if}
-                {/snippet}
-            </Link>
-        `});var U=e(N,2);s(U,{text:"Form Component"});var Y=e(U,2),fe=e(n(Y));r(fe,{source:"<Form>"});var E=e(Y,4),ge=e(n(E));r(ge,{source:"<form>"});var K=e(E,6);t(K,{lang:"shell",source:`
-            frizzante g forms
-        `});var Q=e(K,2),be=e(n(Q));r(be,{source:"<Form>"});var X=e(Q,4),we=e(n(X));r(we,{source:"children"});var _e=e(X,2);t(_e,{lang:"svelte",source:`
-            <script lang="ts">
-                import Form from "$lib/components/forms/form.svelte"
-            <\/script>
-
-            <Form method="POST" action="/login">                            <!-- Defines a form. -->
-                {#snippet children({pending, error})}                       <!-- Captures the forms's pending and error states. -->
-                    <input type="email" name="email">                       <!-- Defines an email field. -->
-                    <input type="password" name="password">                 <!-- Defines an password field. -->
-                    <button disabled={pending} type="submit">Login</button> <!-- Defines a button, which is disabled when the form request is pending. -->
-
-                    {#if error}                                             <!-- If there's been some sort of error... -->
-                        <span>Something went wrong: {error}</span>          <!-- ...renders the error. -->
-                    {/if}
-                {/snippet}
-            </Form>
-        `}),Fe(ye=>Re(w,"href",ye),[()=>p("/some-other-page",{prefix:a.prefix})]),Ie(o,i)},$$slots:{rightSidebar:!0,footer:!0,default:!0}}),Ce()}export{je as default};
+        `});var K=e(D,2),T=e(t(K));r(T,{source:"onsubmit(event)"});var L=e(T,2);r(L,{source:"/process"}),re(Q=>ne(w,"href",Q),[()=>s("/some-other-page",{prefix:n.prefix})]),te(o,i)},$$slots:{rightSidebar:!0,footer:!0,default:!0}}),ae()}export{fe as default};

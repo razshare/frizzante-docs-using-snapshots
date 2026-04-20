@@ -1,16 +1,17 @@
 <style>
     :root {
         --left-sidebar-padding: 1rem;
-        --left-sidebar-item-padding: 0.5rem;
         --left-sidebar-item-roundness: 1rem;
         --left-sidebar-text: #cecdc3;
+        --left-sidebar-text-active: #a2dece;
     }
     .left-sidebar {
+        display: grid;
+        gap: 0.3rem;
         padding: var(--left-sidebar-padding);
         padding-top: 0;
     }
     .left-sidebar-item {
-        padding: var(--left-sidebar-item-padding);
         border-radius: var(--left-sidebar-item-roundness);
         color: var(--left-sidebar-text);
         text-decoration: none;
@@ -22,6 +23,7 @@
     }
     .active {
         opacity: 1;
+        color: var(--left-sidebar-text-active);
     }
 </style>
 

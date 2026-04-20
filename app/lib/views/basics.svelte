@@ -42,15 +42,61 @@
         source={`
             package main
 
-            import "main/lib/core/servers"
+            import (
+                "main/lib/core/servers"
+                "main/lib/core/ssr"
+            )
 
-            var server = servers.New()      // Creates server.
+            var server = servers.New() // Creates server.
+            var render = ssr.New(1)    // Creates an SSR function.
 
             func main() {
-                defer servers.Start(server) // Starts server.
+                server.Render = render // Assigns render function to the server.
+                servers.Start(server)  // Starts server.
             }
         `}
     />
+    <Caution>
+        <span>
+            The first parameter of <InlineCode source="ssr.New()" /> indicates how many runtimes should be created and executed
+            in parallel when rendering views.
+        </span>
+        <br />
+        <span>
+            Setting this value too high could lead to unnecessary large memory usage by your JavaScript runtimes.
+        </span>
+        <br />
+        <span>
+            For most use cases a limit of 1 runtime is more than enough. Modify based on actual performance
+            measurements.
+        </span>
+    </Caution>
+    <Tip>
+        <span>
+            If you don't plan to use SSR features then create your render function using
+            <InlineCode source="csr.New()" /> instead.
+        </span>
+        <Code
+            lang="go"
+            source={`
+            package main
+
+            import (
+                "main/lib/core/servers"
+                "main/lib/core/csr"
+            )
+
+            var server = servers.New() // Creates server.
+            var render = csr.New()     // Creates CSR function.
+
+            func main() {
+                server.Render = render // Assigns render function to the server.
+                servers.Start(server)  // Starts server.
+            }
+        `}
+        />
+        <span>This will reduce the minimum size of the final binary from 25MB to 10MB.</span>
+    </Tip>
     <Title text="Routes" />
     <span>Each server exposes a slice of Routes which you can freely modify.</span>
     <br />

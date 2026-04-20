@@ -154,91 +154,12 @@
         from
         <InlineCode source="/process" />.
     </span>
-    <Title text="Link Component" />
-    <span>
-        Frizzante provides a <InlineCode source="<Link>" />
-        component that captures pending and error states while navigating hyperlinks.
-    </span>
-    <br />
-    <span>It is a replacement for your <InlineCode source="<a>" /> elements.</span>
-    <br />
-    <span>In your project root directory, run the following</span>
-    <Code lang="shell" source="frizzante g links" />
-    <span>This will add the <InlineCode source="<Link>" /> component to your project.</span>
-    <br />
-    <span>
-        This component passes down <InlineCode source="pending" /> and
-        <InlineCode source="error" /> states through the
-        <InlineCode source="children" /> snippet.
-    </span>
-    <Code
-        lang="svelte"
-        source={`
-            ${"<"}script lang="ts">
-                import Link from "$lib/components/links/link.svelte"
-            </script>
-
-            <Link href="/some-path">                               <!-- Defines a link. -->
-                {#snippet children({pending, error})}              <!-- Captures the link's pending and error states. -->
-                    {#if pending}                                  <!-- If the underlying http request is pending... -->
-                        <span>Loading...</span>                    <!-- ...renders a loading hint. -->
-                    {:else if error}                               <!-- If there's been some sort of error... -->
-                        <span>Something went wrong: {error}</span> <!-- ...renders the error. -->
-                    {:else}                                        <!-- If the link is idle... -->
-                        <span>Click me</span>                      <!-- ...renders the link's idle content. -->
-                    {/if}
-                {/snippet}
-            </Link>
-        `}
-    />
-    <Title text="Form Component" />
-    <span>
-        Frizzante provides a <InlineCode source="<Form>" />
-        component that captures pending and error states while submitting forms.
-    </span>
-    <br />
-    <span>It is a replacement for your <InlineCode source="<form>" /> elements.</span>
-    <br />
-    <span>In your project root directory, run the following</span>
-    <Code
-        lang="shell"
-        source={`
-            frizzante g forms
-        `}
-    />
-    <span>This will add the <InlineCode source="<Form>" /> component to your project.</span>
-    <br />
-    <span>
-        This component passes down pending and error states through the <InlineCode source="children" /> snippet.
-    </span>
-    <Code
-        lang="svelte"
-        source={`
-            ${"<"}script lang="ts">
-                import Form from "$lib/components/forms/form.svelte"
-            </script>
-
-            <Form method="POST" action="/login">                            <!-- Defines a form. -->
-                {#snippet children({pending, error})}                       <!-- Captures the forms's pending and error states. -->
-                    <input type="email" name="email">                       <!-- Defines an email field. -->
-                    <input type="password" name="password">                 <!-- Defines an password field. -->
-                    <button disabled={pending} type="submit">Login</button> <!-- Defines a button, which is disabled when the form request is pending. -->
-
-                    {#if error}                                             <!-- If there's been some sort of error... -->
-                        <span>Something went wrong: {error}</span>          <!-- ...renders the error. -->
-                    {/if}
-                {/snippet}
-            </Form>
-        `}
-    />
     {#snippet rightSidebar()}
         <RightSidebar
             items={[
                 { shift: 0, text: "Web Standards" },
                 { shift: 0, text: "Adaptive Hyperlinks" },
                 { shift: 0, text: "Adaptive Forms" },
-                { shift: 0, text: "Link Component" },
-                { shift: 0, text: "Form Component" },
             ]}
         />
     {/snippet}

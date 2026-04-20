@@ -68,6 +68,7 @@
 
 <script lang="ts">
     import { type Snippet } from "svelte"
+    import { fade } from "svelte/transition"
     type Props = {
         title: string
         navbar: Snippet
@@ -87,7 +88,7 @@
     />
     <title>{title}</title>
 </svelte:head>
-<div class="layout">
+<div class="layout" in:fade={{ duration: 0.1 }}>
     <div class="layout-left-sidebar">{@render leftSidebar()}</div>
     <div class="layout-right-sidebar">{@render rightSidebar()}</div>
     <div class="layout-body">

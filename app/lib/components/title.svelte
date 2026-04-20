@@ -1,16 +1,23 @@
 <style>
+    :root {
+        --title-text: #a2dece;
+    }
     .title {
         display: grid;
         grid-template-areas: "text link";
         grid-template-columns: auto 1fr;
         align-items: center;
         gap: 1rem;
+        grid-area: link;
+        display: grid;
+        align-items: center;
+    }
+    .title:hover {
+        text-decoration: none;
     }
     .text {
         grid-area: text;
-    }
-    .link {
-        grid-area: link;
+        color: var(--title-text);
     }
     h1 {
         font-size: 2.5rem;
@@ -46,6 +53,8 @@
         noMargin?: boolean
     }
     let { text, type: tag = "h1", noMargin = false }: Props = $props()
+    let hovered = $state(false)
+    let id: string = $derived(textToAnchor(text))
 
     function typeToSize(tag: string): string {
         switch (tag) {
@@ -63,10 +72,25 @@
                 return "1rem"
         }
     }
-    let id: string = $derived(textToAnchor(text))
+
+    function onmouseover() {
+        hovered = true
+    }
+
+    function onfocus() {
+        hovered = true
+    }
+
+    function onmouseout() {
+        hovered = false
+    }
+
+    function onblur() {
+        hovered = false
+    }
 </script>
 
-<div class="title">
+<a class="title" href="#{id}" {onmouseover} {onmouseout} {onfocus} {onblur}>
     <div class="text" style="font-size:{typeToSize(tag)}">
         {#if tag === "h1"}
             <h1 {id} class:no-margin={noMargin}>
@@ -94,9 +118,9 @@
             </h6>
         {/if}
     </div>
-    <div class="link">
-        <a href="#{id}">
+    <div class="icon">
+        {#if hovered}
             <Icon path={mdiLinkVariant} size={typeToSize(tag)} />
-        </a>
+        {/if}
     </div>
-</div>
+</a>

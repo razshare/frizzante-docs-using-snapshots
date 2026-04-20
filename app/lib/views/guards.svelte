@@ -50,7 +50,9 @@
             source="application/json"
         />
     </span>
-    <Image src={diagram1} width="100%" />
+    <br />
+    <Image src={diagram1} width="auto" />
+    <br />
     <Title text="Composition" />
     <span>You can compose multiple guards in order to create more advanced restrictions.</span>
     <Code
@@ -92,7 +94,9 @@
             }
         `}
     />
-    <Image src={diagram2} width="100%" />
+    <br />
+    <Image src={diagram2} width="auto" />
+    <br />
     {#snippet rightSidebar()}
         <RightSidebar
             items={[
