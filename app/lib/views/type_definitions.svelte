@@ -8,6 +8,7 @@
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Tip from "$lib/components/tip.svelte"
     import Title from "$lib/components/title.svelte"
+    import { href } from "$lib/scripts/core/href"
     import { base } from "$lib/scripts/strings/base"
     let { prefix } = $props()
 </script>
@@ -85,7 +86,8 @@
         <Tip>
             <span>
                 Instead of calling <InlineCode source="types.Generate[T]()" />
-                in your main program, you can use the <strong>pre</strong> build checkpoint to generate types.
+                in your main program, you can use the
+                <a {...href("/build_checkpoints#pre-build-checkpoint")}>pre build checkpoint</a> to generate types.
             </span>
             <Code
                 lang="go"
@@ -125,8 +127,9 @@
             </Note>
         </Tip>
     </KeyedSection>
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Type Definitions" },
                 { shift: 1, text: "Define your Go types" },

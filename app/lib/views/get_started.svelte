@@ -48,8 +48,9 @@
             {/snippet}
         </FileTree>
     </KeyedSection>
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Get Started" },
                 { shift: 1, text: "Install frizzante" },

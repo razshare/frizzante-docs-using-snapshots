@@ -40,8 +40,9 @@
     <KeyedSection key="4" description="Run.">
         <Code lang="sh" source="docker run -p 8080:8080 my-web-server" />
     </KeyedSection>
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Docker" },
                 { shift: 0, text: "Get Started" },

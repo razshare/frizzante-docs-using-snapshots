@@ -396,8 +396,9 @@
                 "https://github.com/razshare/frizzante-example-blog",
         }}
     />
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Todos Example" },
                 { shift: 0, text: "Main" },

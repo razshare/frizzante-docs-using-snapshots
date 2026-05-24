@@ -38,8 +38,9 @@
         </a>.
     </span>
 
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Issues" },
                 { shift: 0, text: "Reporting a Bug" },

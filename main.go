@@ -32,6 +32,7 @@ func main() {
 		}},
 		{Pattern: "GET /get_started", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "GetStarted", Props: props}) }},
 		{Pattern: "GET /basics", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "Basics", Props: props}) }},
+		{Pattern: "GET /build_checkpoints", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "BuildCheckpoints", Props: props}) }},
 		{Pattern: "GET /web_sockets", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "WebSockets", Props: props}) }},
 		{Pattern: "GET /server_sent_events", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "ServerSentEvents", Props: props}) }},
 		{Pattern: "GET /guards", Handler: func(client *clients.Client) { send.View(client, views.View{Name: "Guards", Props: props}) }},

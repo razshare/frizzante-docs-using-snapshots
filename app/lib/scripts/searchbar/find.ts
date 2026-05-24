@@ -173,6 +173,31 @@ const suggestions: Suggestion[] = [
             return base(`/basics#${textToAnchor(this.section)}`, { prefix })
         },
     },
+    // Build Checkpoints.
+    {
+        page: "Build Checkpoints",
+        section: "Build Checkpoints",
+        description: "Execute code before and after building",
+        href(prefix: string): string {
+            return base(`/build_checkpoints#${textToAnchor(this.section)}`, { prefix })
+        },
+    },
+    {
+        page: "Build Checkpoints",
+        section: "Pre Build Checkpoint",
+        description: "Execute code before building",
+        href(prefix: string): string {
+            return base(`/build_checkpoints#${textToAnchor(this.section)}`, { prefix })
+        },
+    },
+    {
+        page: "Build Checkpoints",
+        section: "Post Build Checkpoint",
+        description: "Execute code after building",
+        href(prefix: string): string {
+            return base(`/build_checkpoints#${textToAnchor(this.section)}`, { prefix })
+        },
+    },
     // Web Sockets.
     {
         page: "Web Sockets",

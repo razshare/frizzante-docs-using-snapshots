@@ -377,8 +377,9 @@
             <li>you prefer a guided interface</li>
         </ul>
     </Note>
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Cli" },
                 { shift: 0, text: "Create Project" },

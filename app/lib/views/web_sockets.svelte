@@ -57,8 +57,8 @@
 
     `}
     />
-    {#snippet rightSidebar()}
-        <RightSidebar items={[{ shift: 0, text: "Web Sockets" }]} />
+    {#snippet rightSidebar({ body })}
+        <RightSidebar {body} items={[{ shift: 0, text: "Web Sockets" }]} />
     {/snippet}
     {#snippet footer()}
         <Footer

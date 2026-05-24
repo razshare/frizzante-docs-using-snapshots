@@ -160,8 +160,9 @@
         from
         <InlineCode source="/process" />.
     </span>
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Web Standards" },
                 { shift: 0, text: "Adaptive Hyperlinks" },

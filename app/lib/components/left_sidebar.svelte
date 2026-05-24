@@ -49,6 +49,11 @@
 <div class="left-sidebar">
     {@render item({ text: "Get Started", viewName: "GetStarted", href: base("/get_started", { prefix }) })}
     {@render item({ text: "Basics", viewName: "Basics", href: base("/basics", { prefix }) })}
+    {@render item({
+        text: "Build Checkpoints",
+        viewName: "BuildCheckpoints",
+        href: base("/build_checkpoints", { prefix }),
+    })}
     {@render item({ text: "Web Sockets", viewName: "WebSockets", href: base("/web_sockets", { prefix }) })}
     {@render item({
         text: "Server Sent Events",

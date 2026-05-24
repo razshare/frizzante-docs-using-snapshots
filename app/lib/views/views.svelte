@@ -329,8 +329,9 @@
             </Caution>
         </Tip>
     </KeyedSection>
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Views" },
                 { shift: 0, text: "Server Exports" },

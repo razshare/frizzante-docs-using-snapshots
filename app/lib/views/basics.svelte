@@ -529,8 +529,9 @@
             }
         `}
     />
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Basics" },
                 { shift: 0, text: "Server" },

@@ -2,18 +2,20 @@
     import Layout from "$lib/components/layout.svelte"
     import LeftSidebar from "$lib/components/left_sidebar.svelte"
     import Navbar from "$lib/components/navbar.svelte"
+    import { scrollTo } from "$lib/scripts/scroll_to"
     import { onMount, type Snippet } from "svelte"
     type Props = {
         title: string
-        rightSidebar: Snippet
+        rightSidebar: Snippet<[{ body: HTMLDivElement }]>
         footer: Snippet
         children: Snippet
         prefix: string
     }
-    let { title, children, rightSidebar: sidebar, footer: pageFooter, prefix }: Props = $props()
+    let { title, children, rightSidebar: rightSidebar_, footer: pageFooter, prefix }: Props = $props()
     let searchQuery: string = $state("")
     let searchFocused: boolean = $state(false)
-    onMount(function start() {
+    let body: false | HTMLDivElement = $state(false)
+    onMount(async function start() {
         // There is a very good chance that the URL contains a hash.
         // Since pages are loaded asynchronously, the first render of the dom
         // may not actually contain the contents of the page.
@@ -28,14 +30,18 @@
         //
         // We force the browser to re-evaluate the url hash,
         // so that it scrolls to the target element.
-        //
         if (window.location.hash !== "") {
             window.location.hash = window.location.hash
+            if (!body) {
+                console.warn("body element not found")
+                return
+            }
+            scrollTo({ container: body, targetId: window.location.hash.substring(1) })
         }
     })
 </script>
 
-<Layout {title}>
+<Layout {title} bind:body>
     {#snippet navbar()}
         <Navbar bind:search={searchQuery} bind:focused={searchFocused} {prefix} />
     {/snippet}
@@ -49,6 +55,8 @@
         <LeftSidebar {prefix} />
     {/snippet}
     {#snippet rightSidebar()}
-        {@render sidebar()}
+        {#if body}
+            {@render rightSidebar_({ body })}
+        {/if}
     {/snippet}
 </Layout>

@@ -78,8 +78,9 @@
     <span>
         When you’re done with your changes you can submit a pull request in order to implement them into frizzante.
     </span>
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Contributing" },
                 { shift: 0, text: "Clone Repository" },

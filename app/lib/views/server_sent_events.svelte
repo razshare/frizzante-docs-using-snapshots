@@ -58,8 +58,8 @@
         {/each}
     `}
     />
-    {#snippet rightSidebar()}
-        <RightSidebar items={[{ shift: 0, text: "Server Sent Events" }]} />
+    {#snippet rightSidebar({ body })}
+        <RightSidebar {body} items={[{ shift: 0, text: "Server Sent Events" }]} />
     {/snippet}
     {#snippet footer()}
         <Footer

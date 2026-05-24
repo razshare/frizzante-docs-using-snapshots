@@ -177,8 +177,9 @@
         You can find an old Vue3 example
         <a target="_blank" href="https://github.com/razshare/frizzante-example-vue3">here</a>.
     </span>
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Faq" },
                 { shift: 0, text: "Why doesn’t Frizzante have middleware?" },

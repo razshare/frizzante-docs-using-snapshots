@@ -207,14 +207,19 @@
             directory to a CDN and your website should render statically.
         </span>
     </KeyedSection>
-    {#snippet rightSidebar()}
-        <RightSidebar items={[{ shift: 0, text: "Snapshots" }]} />
-        <RightSidebar items={[{ shift: 1, text: "List statics" }]} />
-        <RightSidebar items={[{ shift: 1, text: "Start the application" }]} />
-        <RightSidebar items={[{ shift: 2, text: "Start development server" }]} />
-        <RightSidebar items={[{ shift: 2, text: "Start production server" }]} />
-        <RightSidebar items={[{ shift: 2, text: "Start development server using makefile" }]} />
-        <RightSidebar items={[{ shift: 1, text: "Snapshot" }]} />
+    {#snippet rightSidebar({ body })}
+        <RightSidebar
+            {body}
+            items={[
+                { shift: 0, text: "Snapshots" },
+                { shift: 1, text: "List statics" },
+                { shift: 1, text: "Start the application" },
+                { shift: 2, text: "Start development server" },
+                { shift: 2, text: "Start production server" },
+                { shift: 2, text: "Start development server using makefile" },
+                { shift: 1, text: "Snapshot" },
+            ]}
+        />
     {/snippet}
     {#snippet footer()}
         <Footer

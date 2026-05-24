@@ -95,8 +95,9 @@
         rightSidebar: Snippet
         content: Snippet
         footer: Snippet
+        body: false | HTMLDivElement
     }
-    let { title, navbar, leftSidebar, rightSidebar, content, footer }: Props = $props()
+    let { title, navbar, leftSidebar, rightSidebar, content, footer, body = $bindable(false) }: Props = $props()
 </script>
 
 <svelte:head>
@@ -110,7 +111,7 @@
 <div class="layout" in:fade={{ duration: 0.1 }}>
     <div class="layout-left-sidebar">{@render leftSidebar()}</div>
     <div class="layout-right-sidebar">{@render rightSidebar()}</div>
-    <div class="layout-body">
+    <div bind:this={body} class="layout-body">
         <div class="layout-body-content">{@render content()}</div>
         <div class="layout-body-footer">{@render footer()}</div>
     </div>

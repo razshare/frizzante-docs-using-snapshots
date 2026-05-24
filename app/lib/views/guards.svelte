@@ -1,15 +1,11 @@
 <script lang="ts">
-    import Code from "$lib/components/code.svelte"
-    import InlineCode from "$lib/components/inline_code.svelte"
-    import Page from "$lib/components/page.svelte"
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     import diagram1 from "$lib/assets/guards_diagram_1.svg"
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-expect-error
     import diagram2 from "$lib/assets/guards_diagram_2.svg"
+    import Code from "$lib/components/code.svelte"
     import Footer from "$lib/components/footer.svelte"
     import Image from "$lib/components/image.svelte"
+    import InlineCode from "$lib/components/inline_code.svelte"
+    import Page from "$lib/components/page.svelte"
     import RightSidebar from "$lib/components/right_sidebar.svelte"
     import Title from "$lib/components/title.svelte"
     import { base } from "$lib/scripts/strings/base"
@@ -97,8 +93,9 @@
     <br />
     <Image src={diagram2} width="auto" />
     <br />
-    {#snippet rightSidebar()}
+    {#snippet rightSidebar({ body })}
         <RightSidebar
+            {body}
             items={[
                 { shift: 0, text: "Guards" },
                 { shift: 0, text: "Composition" },

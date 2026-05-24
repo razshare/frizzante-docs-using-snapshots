@@ -26,15 +26,29 @@
 
 <script lang="ts">
     import MenuItem from "$lib/components/menu_item.svelte"
+    import { scrollTo } from "$lib/scripts/scroll_to"
     import { textToAnchor } from "$lib/scripts/text_to_anchor"
     type Item = { text: string; shift: number }
-    type Props = { items: Item[] }
-    let { items }: Props = $props()
+    type Props = { items: Item[]; body: false | HTMLDivElement }
+    let { items, body = false }: Props = $props()
 </script>
 
 {#snippet item(item: Item)}
     {@const id = textToAnchor(item.text)}
-    <a href="#{id}" class="right-sidebar-item" style:--right-sidebar-item-shift={item.shift}>
+    <a
+        href="#{id}"
+        class="right-sidebar-item"
+        style:--right-sidebar-item-shift={item.shift}
+        onclick={function onclick(event) {
+            event.preventDefault()
+            if (!body) {
+                console.warn("body element not found")
+                return
+            }
+            window.location.hash = `#${id}`
+            scrollTo({ container: body, targetId: id })
+        }}
+    >
         <MenuItem>{item.text}</MenuItem>
     </a>
 {/snippet}
