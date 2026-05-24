@@ -2,7 +2,7 @@
     :root {
         --left-sidebar-gap: 0.5rem;
         --left-sidebar-padding: 1rem;
-        --left-sidebar-item-roundness: 1rem;
+        --left-sidebar-item-roundness: 0;
         --left-sidebar-text: #cecdc3;
         --left-sidebar-text-active: #d24317;
     }

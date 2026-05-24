@@ -5,7 +5,7 @@
         --caution-title: #fcc192;
         --caution-icon: #fcc192;
         --caution-padding: 0.7rem;
-        --caution-roundness: 1rem;
+        --caution-roundness: 0;
         --caution-margin: 0.5rem;
     }
     .caution {

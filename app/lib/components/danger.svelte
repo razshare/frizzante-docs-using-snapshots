@@ -5,7 +5,7 @@
         --danger-icon: #ff9995;
         --danger-title: #ff9995;
         --danger-padding: 0.7rem;
-        --danger-roundness: 0.3rem;
+        --danger-roundness: 0;
         --danger-margin: 0.5rem;
     }
     .danger {

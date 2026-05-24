@@ -5,7 +5,7 @@
         --tip-icon: #a193bd;
         --tip-title: #a193bd;
         --tip-padding: 0.7rem;
-        --tip-roundness: 1rem;
+        --tip-roundness: 0;
         --tip-margin: 0.5rem;
     }
     .tip {

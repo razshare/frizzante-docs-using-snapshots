@@ -1,7 +1,7 @@
 <style>
     :root {
         --button-padding: 1rem;
-        --button-roundness: 1rem;
+        --button-roundness: 0;
         --button-background: #d24317;
         --button-text: #100f0f;
         --button-ghost-background: transparent;

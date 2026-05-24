@@ -4,7 +4,7 @@
         --code-text: #cecdc3;
         --code-margin: 1rem;
         --code-padding: 1rem;
-        --code-roundness: 1rem;
+        --code-roundness: 0;
     }
     .code {
         margin-top: var(--code-margin);

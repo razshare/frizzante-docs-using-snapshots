@@ -5,7 +5,7 @@
         --note-icon: #90b1c4;
         --note-title: #90b1c4;
         --note-padding: 0.7rem;
-        --note-roundness: 1rem;
+        --note-roundness: 0;
         --note-margin: 0.5rem;
     }
     .note {

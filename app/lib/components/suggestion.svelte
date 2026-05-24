@@ -1,7 +1,7 @@
 <style>
     :root {
         --suggestion-padding: 1rem;
-        --suggestion-roundness: 1rem;
+        --suggestion-roundness: 0;
         --suggestion-text: #c0c0c0;
         --suggestion-hover-background: rgba(210, 67, 23, 0.05);
         --suggestion-hover-text: #d24317;

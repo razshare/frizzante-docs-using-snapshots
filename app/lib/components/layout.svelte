@@ -75,6 +75,7 @@
         grid-area: layout-body;
         overflow: auto;
         z-index: 0;
+        padding: var(--layout-padding);
     }
     .layout-body-content {
         z-index: 0;

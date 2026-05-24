@@ -4,11 +4,11 @@
         --searchbar-text-focused: #c0c0c0;
         --searchbar-border: 1px solid #6e6e6e;
         --searchbar-border-focused: 1px solid #c0c0c0;
-        --searchbar-roundness: 1rem;
+        --searchbar-roundness: 0;
         --searchbar-padding: 0.5rem;
         --searchbar-gap: 0.1rem;
         --searchbar-results-background: #0b0a0a;
-        --searchbar-results-roundness: 1rem;
+        --searchbar-results-roundness: 0;
         --searchbar-results-padding: 1rem;
     }
     .searchbar {
@@ -65,7 +65,7 @@
         padding: var(--searchbar-results-padding);
         left: 0;
         right: 0;
-        top: 5rem;
+        top: 4rem;
         height: 20rem;
         overflow: hidden;
     }
