@@ -1,6 +1,6 @@
 <style>
     :root {
-        --navbar-title-text: #a2dece;
+        --navbar-title-text: #d24317;
         --navbar-tile-size: 1.5rem;
         --navbar-gap: 1rem;
     }
@@ -8,7 +8,7 @@
         display: grid;
         gap: var(--navbar-gap);
         align-items: center;
-        grid-template-columns: auto 2fr 2fr 2fr auto 0;
+        grid-template-columns: auto 1fr 2fr 2fr auto 0;
         grid-template-areas: "navbar-logo navbar-title navbar-searchbar empty navbar-links navbar-menu-link";
     }
     .navbar-menu-link {
@@ -90,9 +90,9 @@
         </a>
     </div>
     <div class="navbar-logo">
-        <Image src={logo} height="2rem" alt="logo" />
+        <Image src={logo} height="3rem" alt="logo" />
     </div>
-    <div class="navbar-title">Frizzante Docs</div>
+    <div class="navbar-title"></div>
     <div class="navbar-searchbar">
         {#if IS_BROWSER}
             <Searchbar bind:query={search} bind:focused placeholder="Start typing to search." {prefix} />

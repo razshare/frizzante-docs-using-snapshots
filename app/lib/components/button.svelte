@@ -2,7 +2,7 @@
     :root {
         --button-padding: 1rem;
         --button-roundness: 1rem;
-        --button-background: #a2dece;
+        --button-background: #d24317;
         --button-text: #100f0f;
         --button-ghost-background: transparent;
         --button-ghost-text: #cecdc3;

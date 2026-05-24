@@ -17,6 +17,7 @@ export async function highlighter() {
                 import("@shikijs/langs/log"),
                 import("@shikijs/langs/html"),
                 import("@shikijs/langs/makefile"),
+                import("@shikijs/langs/toml"),
             ],
             engine: createOnigurumaEngine(import("shiki/wasm")),
         })

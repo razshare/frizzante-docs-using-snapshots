@@ -25,10 +25,12 @@
             ${"<"}script lang="ts">
                 import { href } from "$lib/scripts/core/href.ts"
             </script>
-
-            <a {...href("/some-other-page")}> Go to some other page </a> <!-- Defines a link, which when triggered will either
-                                                                              directly navigate to the given path, or do so using 
-                                                                              fetch, depending on wether JavaScript is enabled or not. -->
+            <!--
+            Defines a link, which when triggered will either
+            directly navigate to the given path, or do so using 
+            fetch, depending on wether JavaScript is enabled or not.
+            -->
+            <a {...href("/some-other-page")}> Go to some other page </a>
         `}
     />
     <span>
@@ -81,17 +83,19 @@
     />
     <Title text="Adaptive Forms" />
     <Code
-        lang="go"
+        lang="svelte"
         source={`
             ${"<"}script lang="ts">
                 import { action } from "$lib/scripts/core/action.ts"
             </script>
-
-            <form {...action("/process")}>            <!-- Defines a form. -->
-                <input type="text" name="name" />     <!-- Defines a text field. -->
-                <button type="submit">Submit</button> <!-- Defines a button, which when triggered will either
-                                                           directly submit the form, or do so using fetch(),
-                                                           depending on wether JavaScript is enabled or not. -->
+            <form {...action("/process")}>
+                <input type="text" name="name" />
+                <!--
+                Defines a button, which when triggered will either
+                directly submit the form, or do so using fetch(),
+                depending on wether JavaScript is enabled or not.
+                -->
+                <button type="submit">Submit</button>
             </form>
         `}
     />

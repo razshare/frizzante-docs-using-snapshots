@@ -4,7 +4,7 @@
         --right-sidebar-padding: 1rem;
         --right-sidebar-item-roundness: 1rem;
         --right-sidebar-text: #cecdc3;
-        --right-sidebar-text-active: #a2dece;
+        --right-sidebar-text-active: #d24317;
     }
     .right-sidebar {
         display: grid;
@@ -21,11 +21,6 @@
     .right-sidebar-item:hover {
         text-decoration: none;
         opacity: 1;
-    }
-    .active {
-        opacity: 1;
-        color: var(--right-sidebar-text-active);
-        font-weight: bold;
     }
 </style>
 

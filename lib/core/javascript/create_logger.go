@@ -4,9 +4,8 @@ import (
 	"log"
 	"strings"
 
-	"main/lib/core/stack"
-
 	"github.com/dop251/goja"
+	"main/lib/core/stack"
 )
 
 func CreateLogger(options CreateLoggerOptions) func(call goja.FunctionCall) goja.Value {

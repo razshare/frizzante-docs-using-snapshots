@@ -1,7 +1,7 @@
 <style>
     :root {
         --title-text: #cecdc3;
-        --title-link: #a2dece;
+        --title-link: #d24317;
     }
     .title {
         display: grid;

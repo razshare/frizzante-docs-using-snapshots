@@ -109,9 +109,11 @@
     <Note>
         <span>Your implementation may vary.</span>
         <br />
-        <span>This implementation doesn’t directly invoke the next hook, instead it sets a flag.</span>
+        <span>
+            This implementation doesn’t directly invoke the next hook, instead it use a flag to check when to stop.
+        </span>
         <br />
-        <span>This should keep your stack size smaller and thus more readable.</span>
+        <span>This should reduce nesting in your stack trace and keep it a little more readable.</span>
     </Note>
     <Title type="h5" text="Middleware Usage" />
     <Code
@@ -172,7 +174,7 @@
     </span>
     <br />
     <span>
-        You can find a Vue3 example
+        You can find an old Vue3 example
         <a target="_blank" href="https://github.com/razshare/frizzante-example-vue3">here</a>.
     </span>
     {#snippet rightSidebar()}

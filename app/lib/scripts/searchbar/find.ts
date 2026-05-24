@@ -593,7 +593,7 @@ const suggestions: Suggestion[] = [
     },
     {
         page: "Docker",
-        section: "Create a new container",
+        section: "Build your program statically",
         description: "",
         href(prefix: string): string {
             return base(`/docker#${textToAnchor(this.section)}`, { prefix })
@@ -601,7 +601,7 @@ const suggestions: Suggestion[] = [
     },
     {
         page: "Docker",
-        section: "Start the container",
+        section: "Make a Dockerfile",
         description: "",
         href(prefix: string): string {
             return base(`/docker#${textToAnchor(this.section)}`, { prefix })
@@ -609,7 +609,7 @@ const suggestions: Suggestion[] = [
     },
     {
         page: "Docker",
-        section: "Attach to this container with your IDE or directly with a shell",
+        section: "Build the immage",
         description: "",
         href(prefix: string): string {
             return base(`/docker#${textToAnchor(this.section)}`, { prefix })
@@ -617,47 +617,7 @@ const suggestions: Suggestion[] = [
     },
     {
         page: "Docker",
-        section: "Configure project",
-        description: "",
-        href(prefix: string): string {
-            return base(`/docker#${textToAnchor(this.section)}`, { prefix })
-        },
-    },
-    {
-        page: "Docker",
-        section: "Start development",
-        description: "",
-        href(prefix: string): string {
-            return base(`/docker#${textToAnchor(this.section)}`, { prefix })
-        },
-    },
-    {
-        page: "Docker",
-        section: "Build",
-        description: "",
-        href(prefix: string): string {
-            return base(`/docker#${textToAnchor(this.section)}`, { prefix })
-        },
-    },
-    {
-        page: "Docker",
-        section: "Build and run production binary inside container",
-        description: "",
-        href(prefix: string): string {
-            return base(`/docker#${textToAnchor(this.section)}`, { prefix })
-        },
-    },
-    {
-        page: "Docker",
-        section: "Build production Docker image",
-        description: "",
-        href(prefix: string): string {
-            return base(`/docker#${textToAnchor(this.section)}`, { prefix })
-        },
-    },
-    {
-        page: "Docker",
-        section: "Use Docker Compose for production",
+        section: "Run",
         description: "",
         href(prefix: string): string {
             return base(`/docker#${textToAnchor(this.section)}`, { prefix })

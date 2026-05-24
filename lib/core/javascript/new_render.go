@@ -5,11 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"main/lib/core/security"
-	"main/lib/core/views"
-	"main/lib/dev/types"
-
 	"github.com/dop251/goja"
+	"main/lib/core/security"
+	"main/lib/core/types"
+	"main/lib/core/views"
 )
 
 func NewRender(options NewRenderOptions) (render Render, err error) {

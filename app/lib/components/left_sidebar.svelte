@@ -4,7 +4,7 @@
         --left-sidebar-padding: 1rem;
         --left-sidebar-item-roundness: 1rem;
         --left-sidebar-text: #cecdc3;
-        --left-sidebar-text-active: #a2dece;
+        --left-sidebar-text-active: #d24317;
     }
     .left-sidebar {
         display: grid;
